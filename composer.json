@@ -141,7 +141,7 @@
   },
   "scripts": {
     "format": "php-cs-fixer fix index.php src/Aspose/ tests/ snippets/ --config=php-cs-fixer.conf",
-    "lint": "phpstan analyse index.php src/ tests/ --level=3",
+    "lint": "phpstan analyse index.php src/ tests/ --level=4",
     "test": "phpunit"
   }
 }
