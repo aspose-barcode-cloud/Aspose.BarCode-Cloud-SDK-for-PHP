@@ -4,7 +4,7 @@ declare(strict_types=1);
 /**
  * --------------------------------------------------------------------------------------------------------------------
  * <copyright company="Aspose" file="ScanApi.php">
- *   Copyright (c) 2025 Aspose Pty Ltd
+ *   Copyright (c) 2026 Aspose Pty Ltd
  * </copyright>
  * <summary>
  *   Permission is hereby granted, free of charge, to any person obtaining a copy
