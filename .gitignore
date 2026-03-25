@@ -1,11 +1,11 @@
 /*.lock
-/vendor
-/nbproject/private
-Configuration*.json
-!Configuration.example.json
-
 /.php-cs-fixer.cache
 /.phpunit.cache
 /.phpunit.result.cache
-phpunit.log
+/.vscode/
+/nbproject/private
 /snippets_test
+/vendor
+Configuration*.json
+!Configuration.example.json
+phpunit.log
