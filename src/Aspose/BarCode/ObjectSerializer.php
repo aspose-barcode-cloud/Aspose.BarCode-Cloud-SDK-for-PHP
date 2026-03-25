@@ -292,9 +292,7 @@ class ObjectSerializer
             throw new \InvalidArgumentException('Invalid type');
         }
 
-        $castBool = function ($v) {
-            return $v ? 'true' : 'false';
-        };
+        $castBool = function ($v) { return $v ? 'true' : 'false'; };
 
         $qs = '';
         foreach ($params as $k => $v) {
