@@ -33,6 +33,10 @@ To use these SDKs, you will need Client Id and Client Secret which can be looked
 
 You can either directly use it in your project via source code or get [Packagist distribution](https://packagist.org/packages/aspose/barcode-cloud-php) (recommended).
 
+## AI Agent Skills
+
+This repository includes an AI-agent skill in [`skills/aspose-barcode-cloud-php/SKILL.md`](skills/aspose-barcode-cloud-php/SKILL.md). Point your coding agent to it when working with this SDK so it follows the repo workflow and SDK-specific API patterns.
+
 ## Installation
 
 ### Via Composer
