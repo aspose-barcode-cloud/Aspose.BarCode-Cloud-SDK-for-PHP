@@ -1,0 +1,4 @@
+interface:
+  display_name: "Generate and scan barcode in PHP"
+  short_description: "Use Aspose.BarCode Cloud from PHP"
+  default_prompt: "Use $generate-and-scan-barcode-php to write or update PHP code that generates, recognizes, or scans barcodes with Aspose.BarCode Cloud."

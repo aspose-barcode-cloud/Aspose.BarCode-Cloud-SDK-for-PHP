@@ -1,4 +1,0 @@
-interface:
-  display_name: "Aspose.BarCode Cloud PHP"
-  short_description: "Write PHP barcode code with Aspose Cloud"
-  default_prompt: "Use $aspose-barcode-cloud-php to write or update PHP code that generates, recognizes, or scans barcodes with Aspose.BarCode Cloud."

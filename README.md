@@ -35,7 +35,7 @@ You can either directly use it in your project via source code or get [Packagist
 
 ## AI Agent Skills
 
-This repository includes an AI-agent skill in [`skills/aspose-barcode-cloud-php/SKILL.md`](skills/aspose-barcode-cloud-php/SKILL.md). Point your coding agent to it when working with this SDK so it follows the repo workflow and SDK-specific API patterns.
+This repository includes an AI-agent skill in [`skills/generate-and-scan-barcode-php/SKILL.md`](skills/generate-and-scan-barcode-php/SKILL.md). Point your coding agent to it when working with this SDK so it follows the repo workflow and SDK-specific API patterns.
 
 ## Installation
 
@@ -139,5 +139,4 @@ Class | Method | HTTP request | Description
 - [RecognizeBase64Request](docs/Model/RecognizeBase64Request.md)
 - [RegionPoint](docs/Model/RegionPoint.md)
 - [ScanBase64Request](docs/Model/ScanBase64Request.md)
-
 

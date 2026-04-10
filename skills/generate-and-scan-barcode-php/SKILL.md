@@ -1,9 +1,9 @@
 ---
-name: aspose-barcode-cloud-php
+name: generate-and-scan-barcode-php
 description: Write or update PHP code that uses the Aspose.BarCode Cloud SDK (`Aspose\BarCode\...`; Composer package `aspose/barcode-cloud-php`) to generate, recognize, or scan barcodes through Aspose's cloud REST API. Use this skill whenever the user wants barcode work in PHP, touches files under `submodules/php`, or mentions `GenerateApi`, `RecognizeApi`, `ScanApi`, `Configuration`, `GenerateRequestWrapper`, `GenerateBodyRequestWrapper`, `RecognizeBase64Request`, or `ScanMultipartRequestWrapper`. The PHP SDK has several easy-to-miss idioms, including constructing APIs as `new ...Api(null, $config)`, wrapping every call in a request-wrapper object, treating generate results as `SplFileObject` streams, using public `file_url` values for GET recognize and scan methods, and base64-encoding body payloads yourself.
 ---
 
-# Aspose.BarCode Cloud SDK for PHP
+# Generate and scan barcode in PHP
 
 Use this skill to write PHP code against the generated Aspose.BarCode Cloud SDK or to maintain the PHP SDK inside `submodules/php`. Most tasks boil down to choosing the right API class, choosing the right request wrapper, and using the correct transport shape for the data you have.
 
