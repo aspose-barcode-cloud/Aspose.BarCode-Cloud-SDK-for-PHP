@@ -1,5 +1,7 @@
 # Aspose\BarCode\ScanApi
 
+
+
 All URIs are relative to https://api.aspose.cloud/v4.0, except if the operation defines another base path.
 
 | Method | HTTP request | Description |
@@ -150,7 +152,7 @@ $apiInstance = new Aspose\BarCode\Api\ScanApi(
     new GuzzleHttp\Client(),
     $config
 );
-$file = "/path/to/file.txt"; // \SplFileObject | Barcode image file
+$file = '/path/to/file.txt'; // \SplFileObject | Barcode image file
 
 try {
     $result = $apiInstance->scanMultipart($file);
