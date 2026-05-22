@@ -1,5 +1,7 @@
 # Aspose\BarCode\RecognizeApi
 
+
+
 All URIs are relative to https://api.aspose.cloud/v4.0, except if the operation defines another base path.
 
 | Method | HTTP request | Description |
@@ -34,10 +36,10 @@ $apiInstance = new Aspose\BarCode\Api\RecognizeApi(
     new GuzzleHttp\Client(),
     $config
 );
-$barcode_type = new \Aspose\BarCode\Model\DecodeBarcodeType(); // DecodeBarcodeType | Type of barcode to recognize
+$barcode_type = new \Aspose\BarCode\Model\DecodeBarcodeType(); // \Aspose\BarCode\Model\DecodeBarcodeType | Type of barcode to recognize
 $file_url = 'file_url_example'; // string | Url to barcode image
-$recognition_mode = new \Aspose\BarCode\Model\RecognitionMode(); // RecognitionMode | Recognition mode
-$recognition_image_kind = new \Aspose\BarCode\Model\RecognitionImageKind(); // RecognitionImageKind | Image kind for recognition
+$recognition_mode = new \Aspose\BarCode\Model\RecognitionMode(); // \Aspose\BarCode\Model\RecognitionMode | Recognition mode
+$recognition_image_kind = new \Aspose\BarCode\Model\RecognitionImageKind(); // \Aspose\BarCode\Model\RecognitionImageKind | Image kind for recognition
 
 try {
     $result = $apiInstance->recognize($barcode_type, $file_url, $recognition_mode, $recognition_image_kind);
@@ -51,10 +53,10 @@ try {
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **barcode_type** | [**DecodeBarcodeType**](../Model/.md)| Type of barcode to recognize | |
+| **barcode_type** | [**\Aspose\BarCode\Model\DecodeBarcodeType**](../Model/.md)| Type of barcode to recognize | |
 | **file_url** | **string**| Url to barcode image | |
-| **recognition_mode** | [**RecognitionMode**](../Model/.md)| Recognition mode | [optional] |
-| **recognition_image_kind** | [**RecognitionImageKind**](../Model/.md)| Image kind for recognition | [optional] |
+| **recognition_mode** | [**\Aspose\BarCode\Model\RecognitionMode**](../Model/.md)| Recognition mode | [optional] |
+| **recognition_image_kind** | [**\Aspose\BarCode\Model\RecognitionImageKind**](../Model/.md)| Image kind for recognition | [optional] |
 
 ### Return type
 
@@ -157,7 +159,7 @@ $apiInstance = new Aspose\BarCode\Api\RecognizeApi(
     $config
 );
 $barcode_type = new \Aspose\BarCode\Model\DecodeBarcodeType(); // \Aspose\BarCode\Model\DecodeBarcodeType
-$file = "/path/to/file.txt"; // \SplFileObject | Barcode image file
+$file = '/path/to/file.txt'; // \SplFileObject | Barcode image file
 $recognition_mode = new \Aspose\BarCode\Model\RecognitionMode(); // \Aspose\BarCode\Model\RecognitionMode
 $recognition_image_kind = new \Aspose\BarCode\Model\RecognitionImageKind(); // \Aspose\BarCode\Model\RecognitionImageKind
 
