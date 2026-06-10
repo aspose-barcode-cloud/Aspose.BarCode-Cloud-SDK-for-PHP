@@ -10,7 +10,7 @@ use Aspose\BarCode\ObjectSerializer;
 /**
  * RecognizeBase64Request
  *
- * @description Barcode recognize request
+ * @description Barcode recognition request.
  */
 class RecognizeBase64Request implements ArrayAccess
 {
@@ -233,7 +233,7 @@ class RecognizeBase64Request implements ArrayAccess
     /**
      * Sets barcode_types
      *
-     * @param \Aspose\BarCode\Model\DecodeBarcodeType[] $barcode_types Array of decode types to find on barcode
+     * @param \Aspose\BarCode\Model\DecodeBarcodeType[] $barcode_types Array of barcode decode types to find.
      *
      * @return $this
      */

@@ -20,7 +20,7 @@ class ScanMultipartRequestWrapper
     /**
      * Initializes a new instance of the ScanMultipartRequestWrapper class.
      *
-     * @param \SplFileObject $file Barcode image file
+     * @param \SplFileObject $file Barcode image file.
      */
     public function __construct($file)
     {
@@ -28,7 +28,7 @@ class ScanMultipartRequestWrapper
     }
 
     /**
-     * Barcode image file
+     * Barcode image file.
      */
     public $file;
 }

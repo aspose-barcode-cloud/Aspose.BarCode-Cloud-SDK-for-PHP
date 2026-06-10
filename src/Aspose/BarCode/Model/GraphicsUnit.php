@@ -9,7 +9,7 @@ use Aspose\BarCode\ObjectSerializer;
 /**
  * GraphicsUnit
  *
- * @description Subset of Aspose.Drawing.GraphicsUnit.
+ * @description Subset of https://reference.aspose.com/drawing/net/system.drawing/graphicsunit/
  */
 class GraphicsUnit
 {

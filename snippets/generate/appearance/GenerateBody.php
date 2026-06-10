@@ -6,7 +6,7 @@ require 'vendor/autoload.php';
 
 use Aspose\BarCode\Configuration;
 use Aspose\BarCode\GenerateApi;
-use Aspose\BarCode\Model\{GenerateParams, EncodeBarcodeType, EncodeData, EncodeDataType, BarcodeImageParams, BarcodeImageFormat};
+use Aspose\BarCode\Model\{GenerateParams, EncodeBarcodeType, EncodeData, EncodeDataType, BarcodeImageParams, BarcodeImageFormat, QrParams, QREncodeMode, QRErrorLevel, QRVersion};
 use Aspose\BarCode\Requests\GenerateBodyRequestWrapper;
 
 function makeConfiguration(): Configuration
@@ -26,12 +26,12 @@ function makeConfiguration(): Configuration
 
 function main(): void
 {
-    $fileName = __DIR__ . "/../testdata/Code39.jpeg";
+    $fileName = __DIR__ . "/../testdata/QrCustom.jpeg";
 
     $generateApi = new GenerateApi(null, makeConfiguration());
 
     $generateParams = new GenerateParams([
-        'barcode_type' => EncodeBarcodeType::Code39,
+        'barcode_type' => EncodeBarcodeType::QR,
         'encode_data' => new EncodeData([
             'data' => 'Aspose',
             'data_type' => EncodeDataType::StringData
@@ -41,6 +41,12 @@ function main(): void
             'background_color' => '#FFFF00',
             'image_format' => BarcodeImageFormat::Jpeg,
             'rotation_angle' => 90
+        ]),
+        'qr_params' => new QrParams([
+            'qr_encode_mode' => QREncodeMode::Auto,
+            'qr_error_level' => QRErrorLevel::LevelM,
+            'qr_version' => QRVersion::Auto,
+            'qr_aspect_ratio' => 0.75
         ])
     ]);
 

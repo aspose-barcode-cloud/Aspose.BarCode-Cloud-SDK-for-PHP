@@ -9,7 +9,7 @@ use Aspose\BarCode\ObjectSerializer;
 /**
  * EncodeDataType
  *
- * @description Types of data can be encoded to barcode
+ * @description Types of data that can be encoded into a barcode.
  */
 class EncodeDataType
 {

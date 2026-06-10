@@ -21,7 +21,7 @@ class RecognizeMultipartRequestWrapper
      * Initializes a new instance of the RecognizeMultipartRequestWrapper class.
      *
      * @param \Aspose\BarCode\Model\DecodeBarcodeType $barcode_type
-     * @param \SplFileObject $file Barcode image file
+     * @param \SplFileObject $file Barcode image file.
      * @param \Aspose\BarCode\Model\RecognitionMode $recognition_mode
      * @param \Aspose\BarCode\Model\RecognitionImageKind $recognition_image_kind
      */
@@ -39,7 +39,7 @@ class RecognizeMultipartRequestWrapper
     public $barcode_type;
 
     /**
-     * Barcode image file
+     * Barcode image file.
      */
     public $file;
 

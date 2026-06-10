@@ -6,9 +6,9 @@ All URIs are relative to https://api.aspose.cloud/v4.0, except if the operation 
 
 | Method | HTTP request | Description |
 | ------------- | ------------- | ------------- |
-| [**scan()**](ScanApi.md#scan) | **GET** /barcode/scan | Scan barcode from file on server in the Internet using GET requests with parameter in query string. For scaning files from your hard drive use &#x60;scan-body&#x60; or &#x60;scan-multipart&#x60; endpoints instead. |
-| [**scanBase64()**](ScanApi.md#scanBase64) | **POST** /barcode/scan-body | Scan barcode from file in request body using POST requests with parameter in body in json or xml format. |
-| [**scanMultipart()**](ScanApi.md#scanMultipart) | **POST** /barcode/scan-multipart | Scan barcode from file in request body using POST requests with parameter in multipart form. |
+| [**scan()**](ScanApi.md#scan) | **GET** /barcode/scan | Scan a barcode from a file on an Internet server using a GET request with a query string parameter. For scanning files from your hard drive, use &#x60;scan-body&#x60; or &#x60;scan-multipart&#x60; endpoints instead. |
+| [**scanBase64()**](ScanApi.md#scanBase64) | **POST** /barcode/scan-body | Scan a barcode from a file in the request body using a POST request with a JSON or XML body parameter. |
+| [**scanMultipart()**](ScanApi.md#scanMultipart) | **POST** /barcode/scan-multipart | Scan a barcode from a file in the request body using a POST request with a multipart form parameter. |
 
 
 ## `scan()`
@@ -17,7 +17,7 @@ All URIs are relative to https://api.aspose.cloud/v4.0, except if the operation 
 scan($file_url): \Aspose\BarCode\Model\BarcodeResponseList
 ```
 
-Scan barcode from file on server in the Internet using GET requests with parameter in query string. For scaning files from your hard drive use `scan-body` or `scan-multipart` endpoints instead.
+Scan a barcode from a file on an Internet server using a GET request with a query string parameter. For scanning files from your hard drive, use `scan-body` or `scan-multipart` endpoints instead.
 
 ### Example
 
@@ -36,7 +36,7 @@ $apiInstance = new Aspose\BarCode\Api\ScanApi(
     new GuzzleHttp\Client(),
     $config
 );
-$file_url = 'file_url_example'; // string | Url to barcode image
+$file_url = 'file_url_example'; // string | URL to the barcode image.
 
 try {
     $result = $apiInstance->scan($file_url);
@@ -50,7 +50,7 @@ try {
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **file_url** | **string**| Url to barcode image | |
+| **file_url** | **string**| URL to the barcode image. | |
 
 ### Return type
 
@@ -75,7 +75,7 @@ try {
 scanBase64($scan_base64_request): \Aspose\BarCode\Model\BarcodeResponseList
 ```
 
-Scan barcode from file in request body using POST requests with parameter in body in json or xml format.
+Scan a barcode from a file in the request body using a POST request with a JSON or XML body parameter.
 
 ### Example
 
@@ -94,7 +94,7 @@ $apiInstance = new Aspose\BarCode\Api\ScanApi(
     new GuzzleHttp\Client(),
     $config
 );
-$scan_base64_request = new \Aspose\BarCode\Model\ScanBase64Request(); // \Aspose\BarCode\Model\ScanBase64Request | Barcode scan request
+$scan_base64_request = new \Aspose\BarCode\Model\ScanBase64Request(); // \Aspose\BarCode\Model\ScanBase64Request | Barcode scan request.
 
 try {
     $result = $apiInstance->scanBase64($scan_base64_request);
@@ -108,7 +108,7 @@ try {
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **scan_base64_request** | [**\Aspose\BarCode\Model\ScanBase64Request**](../Model/ScanBase64Request.md)| Barcode scan request | |
+| **scan_base64_request** | [**\Aspose\BarCode\Model\ScanBase64Request**](../Model/ScanBase64Request.md)| Barcode scan request. | |
 
 ### Return type
 
@@ -133,7 +133,7 @@ try {
 scanMultipart($file): \Aspose\BarCode\Model\BarcodeResponseList
 ```
 
-Scan barcode from file in request body using POST requests with parameter in multipart form.
+Scan a barcode from a file in the request body using a POST request with a multipart form parameter.
 
 ### Example
 
@@ -152,7 +152,7 @@ $apiInstance = new Aspose\BarCode\Api\ScanApi(
     new GuzzleHttp\Client(),
     $config
 );
-$file = '/path/to/file.txt'; // \SplFileObject | Barcode image file
+$file = '/path/to/file.txt'; // \SplFileObject | Barcode image file.
 
 try {
     $result = $apiInstance->scanMultipart($file);
@@ -166,7 +166,7 @@ try {
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **file** | **\SplFileObject****\SplFileObject**| Barcode image file | |
+| **file** | **\SplFileObject****\SplFileObject**| Barcode image file. | |
 
 ### Return type
 

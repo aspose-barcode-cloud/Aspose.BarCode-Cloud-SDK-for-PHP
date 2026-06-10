@@ -1,11 +1,11 @@
 # RecognizeBase64Request
 
-Barcode recognize request
+Barcode recognition request.
 
 ## Properties
 Name | Type | Description | Notes
 ---- | ---- | ----------- | -----
-**barcode_types** | [**\Aspose\BarCode\Model\DecodeBarcodeType[]**](DecodeBarcodeType.md) | Array of decode types to find on barcode | 
+**barcode_types** | [**\Aspose\BarCode\Model\DecodeBarcodeType[]**](DecodeBarcodeType.md) | Array of barcode decode types to find. | 
 **file_base64** | **string** | Barcode image bytes encoded as base-64. | 
 **recognition_mode** | [**\Aspose\BarCode\Model\RecognitionMode**](RecognitionMode.md) |  | [optional] 
 **recognition_image_kind** | [**\Aspose\BarCode\Model\RecognitionImageKind**](RecognitionImageKind.md) |  | [optional] 

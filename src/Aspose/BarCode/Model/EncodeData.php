@@ -10,7 +10,7 @@ use Aspose\BarCode\ObjectSerializer;
 /**
  * EncodeData
  *
- * @description Data to encode in barcode
+ * @description Data to encode in a barcode.
  */
 class EncodeData implements ArrayAccess
 {
@@ -232,7 +232,7 @@ class EncodeData implements ArrayAccess
     /**
      * Sets data
      *
-     * @param string $data String represents data to encode
+     * @param string $data String that represents the data to encode.
      *
      * @return $this
      */

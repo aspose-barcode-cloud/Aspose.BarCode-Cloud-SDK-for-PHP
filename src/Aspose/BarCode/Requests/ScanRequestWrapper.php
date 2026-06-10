@@ -20,7 +20,7 @@ class ScanRequestWrapper
     /**
      * Initializes a new instance of the ScanRequestWrapper class.
      *
-     * @param string $file_url Url to barcode image
+     * @param string $file_url URL to the barcode image.
      */
     public function __construct($file_url)
     {
@@ -28,7 +28,7 @@ class ScanRequestWrapper
     }
 
     /**
-     * Url to barcode image
+     * URL to the barcode image.
      */
     public $file_url;
 }

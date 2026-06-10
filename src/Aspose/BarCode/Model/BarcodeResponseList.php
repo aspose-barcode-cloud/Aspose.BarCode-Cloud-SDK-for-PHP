@@ -10,7 +10,7 @@ use Aspose\BarCode\ObjectSerializer;
 /**
  * BarcodeResponseList
  *
- * @description Represents information about barcode list.
+ * @description Represents information about a barcode list.
  */
 class BarcodeResponseList implements ArrayAccess
 {
@@ -195,7 +195,7 @@ class BarcodeResponseList implements ArrayAccess
     /**
      * Sets barcodes
      *
-     * @param \Aspose\BarCode\Model\BarcodeResponse[] $barcodes List of barcodes which are present in image.
+     * @param \Aspose\BarCode\Model\BarcodeResponse[] $barcodes List of barcodes that are present in the image.
      *
      * @return $this
      */

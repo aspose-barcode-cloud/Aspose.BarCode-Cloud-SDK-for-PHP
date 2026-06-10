@@ -90,7 +90,7 @@ class GenerateApi
     /**
      * Operation generate
      *
-     * Generate barcode using GET request with parameters in route and query string.
+     * Generate a barcode using a GET request with parameters in the route and query string.
      *
      * @param Requests\GenerateRequestWrapper $request is a request object for operation
      *
@@ -112,7 +112,7 @@ class GenerateApi
     /**
      * Operation generateWithHttpInfo
      *
-     * Generate barcode using GET request with parameters in route and query string.
+     * Generate a barcode using a GET request with parameters in the route and query string.
      *
      * @param Requests\GenerateRequestWrapper $request is a request object for operation
      *
@@ -176,7 +176,7 @@ class GenerateApi
     /**
      * Operation generateAsync
      *
-     * Generate barcode using GET request with parameters in route and query string.
+     * Generate a barcode using a GET request with parameters in the route and query string.
      *
      * @param Requests\GenerateRequestWrapper $request is a request object for operation
      *
@@ -196,7 +196,7 @@ class GenerateApi
     /**
      * Operation generateAsyncWithHttpInfo
      *
-     * Generate barcode using GET request with parameters in route and query string.
+     * Generate a barcode using a GET request with parameters in the route and query string.
      *
      * @param Requests\GenerateRequestWrapper $request is a request object for operation
      *
@@ -274,6 +274,34 @@ class GenerateApi
         }
         if (isset($request->resolution) && $request->resolution < 1) {
             throw new InvalidArgumentException("invalid value for resolution when calling GenerateApi.generate, must be bigger than or equal to 1.");
+        }
+
+        if (isset($request->qr_aspect_ratio) && $request->qr_aspect_ratio > 1) {
+            throw new InvalidArgumentException("invalid value for qr_aspect_ratio when calling GenerateApi.generate, must be smaller than or equal to 1.");
+        }
+        if (isset($request->qr_aspect_ratio) && $request->qr_aspect_ratio < 0.001) {
+            throw new InvalidArgumentException("invalid value for qr_aspect_ratio when calling GenerateApi.generate, must be bigger than or equal to 0.001.");
+        }
+
+        if (isset($request->pdf417_columns) && $request->pdf417_columns > 30) {
+            throw new InvalidArgumentException("invalid value for pdf417_columns when calling GenerateApi.generate, must be smaller than or equal to 30.");
+        }
+        if (isset($request->pdf417_columns) && $request->pdf417_columns < 0) {
+            throw new InvalidArgumentException("invalid value for pdf417_columns when calling GenerateApi.generate, must be bigger than or equal to 0.");
+        }
+
+        if (isset($request->pdf417_rows) && $request->pdf417_rows > 90) {
+            throw new InvalidArgumentException("invalid value for pdf417_rows when calling GenerateApi.generate, must be smaller than or equal to 90.");
+        }
+        if (isset($request->pdf417_rows) && $request->pdf417_rows < 0) {
+            throw new InvalidArgumentException("invalid value for pdf417_rows when calling GenerateApi.generate, must be bigger than or equal to 0.");
+        }
+
+        if (isset($request->pdf417_aspect_ratio) && $request->pdf417_aspect_ratio > 10) {
+            throw new InvalidArgumentException("invalid value for pdf417_aspect_ratio when calling GenerateApi.generate, must be smaller than or equal to 10.");
+        }
+        if (isset($request->pdf417_aspect_ratio) && $request->pdf417_aspect_ratio < 2) {
+            throw new InvalidArgumentException("invalid value for pdf417_aspect_ratio when calling GenerateApi.generate, must be bigger than or equal to 2.");
         }
 
 
@@ -386,6 +414,177 @@ class GenerateApi
                 $queryParams[$queryParamName] = ObjectSerializer::toQueryValue($queryParamValue);
             }
         }
+        if (isset($request->qr_encode_mode)) {
+            $queryParamName = lcfirst('qrEncodeMode');
+            $queryParamValue = is_bool($request->qr_encode_mode) ? ($request->qr_encode_mode ? 'true' : 'false') : $request->qr_encode_mode;
+            if (strpos($resourcePath, '{' . $queryParamName . '}') !== false) {
+                $resourcePath = str_replace('{' . $queryParamName . '}', ObjectSerializer::toPathValue($queryParamValue), $resourcePath);
+            } else {
+                $queryParams[$queryParamName] = ObjectSerializer::toQueryValue($queryParamValue);
+            }
+        }
+        if (isset($request->qr_error_level)) {
+            $queryParamName = lcfirst('qrErrorLevel');
+            $queryParamValue = is_bool($request->qr_error_level) ? ($request->qr_error_level ? 'true' : 'false') : $request->qr_error_level;
+            if (strpos($resourcePath, '{' . $queryParamName . '}') !== false) {
+                $resourcePath = str_replace('{' . $queryParamName . '}', ObjectSerializer::toPathValue($queryParamValue), $resourcePath);
+            } else {
+                $queryParams[$queryParamName] = ObjectSerializer::toQueryValue($queryParamValue);
+            }
+        }
+        if (isset($request->qr_version)) {
+            $queryParamName = lcfirst('qrVersion');
+            $queryParamValue = is_bool($request->qr_version) ? ($request->qr_version ? 'true' : 'false') : $request->qr_version;
+            if (strpos($resourcePath, '{' . $queryParamName . '}') !== false) {
+                $resourcePath = str_replace('{' . $queryParamName . '}', ObjectSerializer::toPathValue($queryParamValue), $resourcePath);
+            } else {
+                $queryParams[$queryParamName] = ObjectSerializer::toQueryValue($queryParamValue);
+            }
+        }
+        if (isset($request->qr_eci_encoding)) {
+            $queryParamName = lcfirst('qrECIEncoding');
+            $queryParamValue = is_bool($request->qr_eci_encoding) ? ($request->qr_eci_encoding ? 'true' : 'false') : $request->qr_eci_encoding;
+            if (strpos($resourcePath, '{' . $queryParamName . '}') !== false) {
+                $resourcePath = str_replace('{' . $queryParamName . '}', ObjectSerializer::toPathValue($queryParamValue), $resourcePath);
+            } else {
+                $queryParams[$queryParamName] = ObjectSerializer::toQueryValue($queryParamValue);
+            }
+        }
+        if (isset($request->qr_aspect_ratio)) {
+            $queryParamName = lcfirst('qrAspectRatio');
+            $queryParamValue = is_bool($request->qr_aspect_ratio) ? ($request->qr_aspect_ratio ? 'true' : 'false') : $request->qr_aspect_ratio;
+            if (strpos($resourcePath, '{' . $queryParamName . '}') !== false) {
+                $resourcePath = str_replace('{' . $queryParamName . '}', ObjectSerializer::toPathValue($queryParamValue), $resourcePath);
+            } else {
+                $queryParams[$queryParamName] = ObjectSerializer::toQueryValue($queryParamValue);
+            }
+        }
+        if (isset($request->micro_qr_version)) {
+            $queryParamName = lcfirst('microQRVersion');
+            $queryParamValue = is_bool($request->micro_qr_version) ? ($request->micro_qr_version ? 'true' : 'false') : $request->micro_qr_version;
+            if (strpos($resourcePath, '{' . $queryParamName . '}') !== false) {
+                $resourcePath = str_replace('{' . $queryParamName . '}', ObjectSerializer::toPathValue($queryParamValue), $resourcePath);
+            } else {
+                $queryParams[$queryParamName] = ObjectSerializer::toQueryValue($queryParamValue);
+            }
+        }
+        if (isset($request->rect_micro_qr_version)) {
+            $queryParamName = lcfirst('rectMicroQrVersion');
+            $queryParamValue = is_bool($request->rect_micro_qr_version) ? ($request->rect_micro_qr_version ? 'true' : 'false') : $request->rect_micro_qr_version;
+            if (strpos($resourcePath, '{' . $queryParamName . '}') !== false) {
+                $resourcePath = str_replace('{' . $queryParamName . '}', ObjectSerializer::toPathValue($queryParamValue), $resourcePath);
+            } else {
+                $queryParams[$queryParamName] = ObjectSerializer::toQueryValue($queryParamValue);
+            }
+        }
+        if (isset($request->code128_encode_mode)) {
+            $queryParamName = lcfirst('code128EncodeMode');
+            $queryParamValue = is_bool($request->code128_encode_mode) ? ($request->code128_encode_mode ? 'true' : 'false') : $request->code128_encode_mode;
+            if (strpos($resourcePath, '{' . $queryParamName . '}') !== false) {
+                $resourcePath = str_replace('{' . $queryParamName . '}', ObjectSerializer::toPathValue($queryParamValue), $resourcePath);
+            } else {
+                $queryParams[$queryParamName] = ObjectSerializer::toQueryValue($queryParamValue);
+            }
+        }
+        if (isset($request->pdf417_encode_mode)) {
+            $queryParamName = lcfirst('pdf417EncodeMode');
+            $queryParamValue = is_bool($request->pdf417_encode_mode) ? ($request->pdf417_encode_mode ? 'true' : 'false') : $request->pdf417_encode_mode;
+            if (strpos($resourcePath, '{' . $queryParamName . '}') !== false) {
+                $resourcePath = str_replace('{' . $queryParamName . '}', ObjectSerializer::toPathValue($queryParamValue), $resourcePath);
+            } else {
+                $queryParams[$queryParamName] = ObjectSerializer::toQueryValue($queryParamValue);
+            }
+        }
+        if (isset($request->pdf417_error_level)) {
+            $queryParamName = lcfirst('pdf417ErrorLevel');
+            $queryParamValue = is_bool($request->pdf417_error_level) ? ($request->pdf417_error_level ? 'true' : 'false') : $request->pdf417_error_level;
+            if (strpos($resourcePath, '{' . $queryParamName . '}') !== false) {
+                $resourcePath = str_replace('{' . $queryParamName . '}', ObjectSerializer::toPathValue($queryParamValue), $resourcePath);
+            } else {
+                $queryParams[$queryParamName] = ObjectSerializer::toQueryValue($queryParamValue);
+            }
+        }
+        if (isset($request->pdf417_truncate)) {
+            $queryParamName = lcfirst('pdf417Truncate');
+            $queryParamValue = is_bool($request->pdf417_truncate) ? ($request->pdf417_truncate ? 'true' : 'false') : $request->pdf417_truncate;
+            if (strpos($resourcePath, '{' . $queryParamName . '}') !== false) {
+                $resourcePath = str_replace('{' . $queryParamName . '}', ObjectSerializer::toPathValue($queryParamValue), $resourcePath);
+            } else {
+                $queryParams[$queryParamName] = ObjectSerializer::toQueryValue($queryParamValue);
+            }
+        }
+        if (isset($request->pdf417_columns)) {
+            $queryParamName = lcfirst('pdf417Columns');
+            $queryParamValue = is_bool($request->pdf417_columns) ? ($request->pdf417_columns ? 'true' : 'false') : $request->pdf417_columns;
+            if (strpos($resourcePath, '{' . $queryParamName . '}') !== false) {
+                $resourcePath = str_replace('{' . $queryParamName . '}', ObjectSerializer::toPathValue($queryParamValue), $resourcePath);
+            } else {
+                $queryParams[$queryParamName] = ObjectSerializer::toQueryValue($queryParamValue);
+            }
+        }
+        if (isset($request->pdf417_rows)) {
+            $queryParamName = lcfirst('pdf417Rows');
+            $queryParamValue = is_bool($request->pdf417_rows) ? ($request->pdf417_rows ? 'true' : 'false') : $request->pdf417_rows;
+            if (strpos($resourcePath, '{' . $queryParamName . '}') !== false) {
+                $resourcePath = str_replace('{' . $queryParamName . '}', ObjectSerializer::toPathValue($queryParamValue), $resourcePath);
+            } else {
+                $queryParams[$queryParamName] = ObjectSerializer::toQueryValue($queryParamValue);
+            }
+        }
+        if (isset($request->pdf417_aspect_ratio)) {
+            $queryParamName = lcfirst('pdf417AspectRatio');
+            $queryParamValue = is_bool($request->pdf417_aspect_ratio) ? ($request->pdf417_aspect_ratio ? 'true' : 'false') : $request->pdf417_aspect_ratio;
+            if (strpos($resourcePath, '{' . $queryParamName . '}') !== false) {
+                $resourcePath = str_replace('{' . $queryParamName . '}', ObjectSerializer::toPathValue($queryParamValue), $resourcePath);
+            } else {
+                $queryParams[$queryParamName] = ObjectSerializer::toQueryValue($queryParamValue);
+            }
+        }
+        if (isset($request->pdf417_eci_encoding)) {
+            $queryParamName = lcfirst('pdf417ECIEncoding');
+            $queryParamValue = is_bool($request->pdf417_eci_encoding) ? ($request->pdf417_eci_encoding ? 'true' : 'false') : $request->pdf417_eci_encoding;
+            if (strpos($resourcePath, '{' . $queryParamName . '}') !== false) {
+                $resourcePath = str_replace('{' . $queryParamName . '}', ObjectSerializer::toPathValue($queryParamValue), $resourcePath);
+            } else {
+                $queryParams[$queryParamName] = ObjectSerializer::toQueryValue($queryParamValue);
+            }
+        }
+        if (isset($request->pdf417_is_reader_initialization)) {
+            $queryParamName = lcfirst('pdf417IsReaderInitialization');
+            $queryParamValue = is_bool($request->pdf417_is_reader_initialization) ? ($request->pdf417_is_reader_initialization ? 'true' : 'false') : $request->pdf417_is_reader_initialization;
+            if (strpos($resourcePath, '{' . $queryParamName . '}') !== false) {
+                $resourcePath = str_replace('{' . $queryParamName . '}', ObjectSerializer::toPathValue($queryParamValue), $resourcePath);
+            } else {
+                $queryParams[$queryParamName] = ObjectSerializer::toQueryValue($queryParamValue);
+            }
+        }
+        if (isset($request->pdf417_macro_characters)) {
+            $queryParamName = lcfirst('pdf417MacroCharacters');
+            $queryParamValue = is_bool($request->pdf417_macro_characters) ? ($request->pdf417_macro_characters ? 'true' : 'false') : $request->pdf417_macro_characters;
+            if (strpos($resourcePath, '{' . $queryParamName . '}') !== false) {
+                $resourcePath = str_replace('{' . $queryParamName . '}', ObjectSerializer::toPathValue($queryParamValue), $resourcePath);
+            } else {
+                $queryParams[$queryParamName] = ObjectSerializer::toQueryValue($queryParamValue);
+            }
+        }
+        if (isset($request->pdf417_is_linked)) {
+            $queryParamName = lcfirst('pdf417IsLinked');
+            $queryParamValue = is_bool($request->pdf417_is_linked) ? ($request->pdf417_is_linked ? 'true' : 'false') : $request->pdf417_is_linked;
+            if (strpos($resourcePath, '{' . $queryParamName . '}') !== false) {
+                $resourcePath = str_replace('{' . $queryParamName . '}', ObjectSerializer::toPathValue($queryParamValue), $resourcePath);
+            } else {
+                $queryParams[$queryParamName] = ObjectSerializer::toQueryValue($queryParamValue);
+            }
+        }
+        if (isset($request->pdf417_is_code128_emulation)) {
+            $queryParamName = lcfirst('pdf417IsCode128Emulation');
+            $queryParamValue = is_bool($request->pdf417_is_code128_emulation) ? ($request->pdf417_is_code128_emulation ? 'true' : 'false') : $request->pdf417_is_code128_emulation;
+            if (strpos($resourcePath, '{' . $queryParamName . '}') !== false) {
+                $resourcePath = str_replace('{' . $queryParamName . '}', ObjectSerializer::toPathValue($queryParamValue), $resourcePath);
+            } else {
+                $queryParams[$queryParamName] = ObjectSerializer::toQueryValue($queryParamValue);
+            }
+        }
 
         $resourcePath = $this->_parseURL($resourcePath, $queryParams);
 
@@ -439,7 +638,7 @@ class GenerateApi
     /**
      * Operation generateBody
      *
-     * Generate barcode using POST request with parameters in body in json or xml format.
+     * Generate a barcode using a POST request with parameters in the request body in JSON or XML format.
      *
      * @param Requests\GenerateBodyRequestWrapper $request is a request object for operation
      *
@@ -461,7 +660,7 @@ class GenerateApi
     /**
      * Operation generateBodyWithHttpInfo
      *
-     * Generate barcode using POST request with parameters in body in json or xml format.
+     * Generate a barcode using a POST request with parameters in the request body in JSON or XML format.
      *
      * @param Requests\GenerateBodyRequestWrapper $request is a request object for operation
      *
@@ -525,7 +724,7 @@ class GenerateApi
     /**
      * Operation generateBodyAsync
      *
-     * Generate barcode using POST request with parameters in body in json or xml format.
+     * Generate a barcode using a POST request with parameters in the request body in JSON or XML format.
      *
      * @param Requests\GenerateBodyRequestWrapper $request is a request object for operation
      *
@@ -545,7 +744,7 @@ class GenerateApi
     /**
      * Operation generateBodyAsyncWithHttpInfo
      *
-     * Generate barcode using POST request with parameters in body in json or xml format.
+     * Generate a barcode using a POST request with parameters in the request body in JSON or XML format.
      *
      * @param Requests\GenerateBodyRequestWrapper $request is a request object for operation
      *
@@ -687,7 +886,7 @@ class GenerateApi
     /**
      * Operation generateMultipart
      *
-     * Generate barcode using POST request with parameters in multipart form.
+     * Generate a barcode using a POST request with parameters in a multipart form.
      *
      * @param Requests\GenerateMultipartRequestWrapper $request is a request object for operation
      *
@@ -709,7 +908,7 @@ class GenerateApi
     /**
      * Operation generateMultipartWithHttpInfo
      *
-     * Generate barcode using POST request with parameters in multipart form.
+     * Generate a barcode using a POST request with parameters in a multipart form.
      *
      * @param Requests\GenerateMultipartRequestWrapper $request is a request object for operation
      *
@@ -773,7 +972,7 @@ class GenerateApi
     /**
      * Operation generateMultipartAsync
      *
-     * Generate barcode using POST request with parameters in multipart form.
+     * Generate a barcode using a POST request with parameters in a multipart form.
      *
      * @param Requests\GenerateMultipartRequestWrapper $request is a request object for operation
      *
@@ -793,7 +992,7 @@ class GenerateApi
     /**
      * Operation generateMultipartAsyncWithHttpInfo
      *
-     * Generate barcode using POST request with parameters in multipart form.
+     * Generate a barcode using a POST request with parameters in a multipart form.
      *
      * @param Requests\GenerateMultipartRequestWrapper $request is a request object for operation
      *
@@ -873,6 +1072,34 @@ class GenerateApi
             throw new InvalidArgumentException("invalid value for resolution when calling GenerateApi.generateMultipart, must be bigger than or equal to 1.");
         }
 
+        if (isset($request->qr_aspect_ratio) && $request->qr_aspect_ratio > 1) {
+            throw new InvalidArgumentException("invalid value for qr_aspect_ratio when calling GenerateApi.generateMultipart, must be smaller than or equal to 1.");
+        }
+        if (isset($request->qr_aspect_ratio) && $request->qr_aspect_ratio < 0.001) {
+            throw new InvalidArgumentException("invalid value for qr_aspect_ratio when calling GenerateApi.generateMultipart, must be bigger than or equal to 0.001.");
+        }
+
+        if (isset($request->pdf417_columns) && $request->pdf417_columns > 30) {
+            throw new InvalidArgumentException("invalid value for pdf417_columns when calling GenerateApi.generateMultipart, must be smaller than or equal to 30.");
+        }
+        if (isset($request->pdf417_columns) && $request->pdf417_columns < 0) {
+            throw new InvalidArgumentException("invalid value for pdf417_columns when calling GenerateApi.generateMultipart, must be bigger than or equal to 0.");
+        }
+
+        if (isset($request->pdf417_rows) && $request->pdf417_rows > 90) {
+            throw new InvalidArgumentException("invalid value for pdf417_rows when calling GenerateApi.generateMultipart, must be smaller than or equal to 90.");
+        }
+        if (isset($request->pdf417_rows) && $request->pdf417_rows < 0) {
+            throw new InvalidArgumentException("invalid value for pdf417_rows when calling GenerateApi.generateMultipart, must be bigger than or equal to 0.");
+        }
+
+        if (isset($request->pdf417_aspect_ratio) && $request->pdf417_aspect_ratio > 10) {
+            throw new InvalidArgumentException("invalid value for pdf417_aspect_ratio when calling GenerateApi.generateMultipart, must be smaller than or equal to 10.");
+        }
+        if (isset($request->pdf417_aspect_ratio) && $request->pdf417_aspect_ratio < 2) {
+            throw new InvalidArgumentException("invalid value for pdf417_aspect_ratio when calling GenerateApi.generateMultipart, must be bigger than or equal to 2.");
+        }
+
 
         $resourcePath = '/barcode/generate-multipart';
         $formParams = [];
@@ -931,6 +1158,82 @@ class GenerateApi
 
         if (isset($request->rotation_angle)) {
             $formParams['rotationAngle'][] = ObjectSerializer::toFormValue($request->rotation_angle);
+        }
+
+        if (isset($request->qr_encode_mode)) {
+            $formParams['qrEncodeMode'][] = ObjectSerializer::toFormValue($request->qr_encode_mode);
+        }
+
+        if (isset($request->qr_error_level)) {
+            $formParams['qrErrorLevel'][] = ObjectSerializer::toFormValue($request->qr_error_level);
+        }
+
+        if (isset($request->qr_version)) {
+            $formParams['qrVersion'][] = ObjectSerializer::toFormValue($request->qr_version);
+        }
+
+        if (isset($request->qr_eci_encoding)) {
+            $formParams['qrECIEncoding'][] = ObjectSerializer::toFormValue($request->qr_eci_encoding);
+        }
+
+        if (isset($request->qr_aspect_ratio)) {
+            $formParams['qrAspectRatio'][] = ObjectSerializer::toFormValue($request->qr_aspect_ratio);
+        }
+
+        if (isset($request->micro_qr_version)) {
+            $formParams['microQRVersion'][] = ObjectSerializer::toFormValue($request->micro_qr_version);
+        }
+
+        if (isset($request->rect_micro_qr_version)) {
+            $formParams['rectMicroQrVersion'][] = ObjectSerializer::toFormValue($request->rect_micro_qr_version);
+        }
+
+        if (isset($request->code128_encode_mode)) {
+            $formParams['code128EncodeMode'][] = ObjectSerializer::toFormValue($request->code128_encode_mode);
+        }
+
+        if (isset($request->pdf417_encode_mode)) {
+            $formParams['pdf417EncodeMode'][] = ObjectSerializer::toFormValue($request->pdf417_encode_mode);
+        }
+
+        if (isset($request->pdf417_error_level)) {
+            $formParams['pdf417ErrorLevel'][] = ObjectSerializer::toFormValue($request->pdf417_error_level);
+        }
+
+        if (isset($request->pdf417_truncate)) {
+            $formParams['pdf417Truncate'][] = ObjectSerializer::toFormValue($request->pdf417_truncate);
+        }
+
+        if (isset($request->pdf417_columns)) {
+            $formParams['pdf417Columns'][] = ObjectSerializer::toFormValue($request->pdf417_columns);
+        }
+
+        if (isset($request->pdf417_rows)) {
+            $formParams['pdf417Rows'][] = ObjectSerializer::toFormValue($request->pdf417_rows);
+        }
+
+        if (isset($request->pdf417_aspect_ratio)) {
+            $formParams['pdf417AspectRatio'][] = ObjectSerializer::toFormValue($request->pdf417_aspect_ratio);
+        }
+
+        if (isset($request->pdf417_eci_encoding)) {
+            $formParams['pdf417ECIEncoding'][] = ObjectSerializer::toFormValue($request->pdf417_eci_encoding);
+        }
+
+        if (isset($request->pdf417_is_reader_initialization)) {
+            $formParams['pdf417IsReaderInitialization'][] = ObjectSerializer::toFormValue($request->pdf417_is_reader_initialization);
+        }
+
+        if (isset($request->pdf417_macro_characters)) {
+            $formParams['pdf417MacroCharacters'][] = ObjectSerializer::toFormValue($request->pdf417_macro_characters);
+        }
+
+        if (isset($request->pdf417_is_linked)) {
+            $formParams['pdf417IsLinked'][] = ObjectSerializer::toFormValue($request->pdf417_is_linked);
+        }
+
+        if (isset($request->pdf417_is_code128_emulation)) {
+            $formParams['pdf417IsCode128Emulation'][] = ObjectSerializer::toFormValue($request->pdf417_is_code128_emulation);
         }
         // body params
         $_tempBody = null;

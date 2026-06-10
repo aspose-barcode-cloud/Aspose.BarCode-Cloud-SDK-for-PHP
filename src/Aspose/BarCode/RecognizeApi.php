@@ -90,7 +90,7 @@ class RecognizeApi
     /**
      * Operation recognize
      *
-     * Recognize barcode from file on server in the Internet using GET requests with parameter in query string. For recognizing files from your hard drive use `recognize-body` or `recognize-multipart` endpoints instead.
+     * Recognize a barcode from a file on an Internet server using a GET request with a query string parameter. For recognizing files from your hard drive, use `recognize-body` or `recognize-multipart` endpoints instead.
      *
      * @param Requests\RecognizeRequestWrapper $request is a request object for operation
      *
@@ -112,7 +112,7 @@ class RecognizeApi
     /**
      * Operation recognizeWithHttpInfo
      *
-     * Recognize barcode from file on server in the Internet using GET requests with parameter in query string. For recognizing files from your hard drive use `recognize-body` or `recognize-multipart` endpoints instead.
+     * Recognize a barcode from a file on an Internet server using a GET request with a query string parameter. For recognizing files from your hard drive, use `recognize-body` or `recognize-multipart` endpoints instead.
      *
      * @param Requests\RecognizeRequestWrapper $request is a request object for operation
      *
@@ -176,7 +176,7 @@ class RecognizeApi
     /**
      * Operation recognizeAsync
      *
-     * Recognize barcode from file on server in the Internet using GET requests with parameter in query string. For recognizing files from your hard drive use `recognize-body` or `recognize-multipart` endpoints instead.
+     * Recognize a barcode from a file on an Internet server using a GET request with a query string parameter. For recognizing files from your hard drive, use `recognize-body` or `recognize-multipart` endpoints instead.
      *
      * @param Requests\RecognizeRequestWrapper $request is a request object for operation
      *
@@ -196,7 +196,7 @@ class RecognizeApi
     /**
      * Operation recognizeAsyncWithHttpInfo
      *
-     * Recognize barcode from file on server in the Internet using GET requests with parameter in query string. For recognizing files from your hard drive use `recognize-body` or `recognize-multipart` endpoints instead.
+     * Recognize a barcode from a file on an Internet server using a GET request with a query string parameter. For recognizing files from your hard drive, use `recognize-body` or `recognize-multipart` endpoints instead.
      *
      * @param Requests\RecognizeRequestWrapper $request is a request object for operation
      *
@@ -365,7 +365,7 @@ class RecognizeApi
     /**
      * Operation recognizeBase64
      *
-     * Recognize barcode from file in request body using POST requests with parameters in body in json or xml format.
+     * Recognize a barcode from a file in the request body using a POST request with JSON or XML body parameters.
      *
      * @param Requests\RecognizeBase64RequestWrapper $request is a request object for operation
      *
@@ -387,7 +387,7 @@ class RecognizeApi
     /**
      * Operation recognizeBase64WithHttpInfo
      *
-     * Recognize barcode from file in request body using POST requests with parameters in body in json or xml format.
+     * Recognize a barcode from a file in the request body using a POST request with JSON or XML body parameters.
      *
      * @param Requests\RecognizeBase64RequestWrapper $request is a request object for operation
      *
@@ -451,7 +451,7 @@ class RecognizeApi
     /**
      * Operation recognizeBase64Async
      *
-     * Recognize barcode from file in request body using POST requests with parameters in body in json or xml format.
+     * Recognize a barcode from a file in the request body using a POST request with JSON or XML body parameters.
      *
      * @param Requests\RecognizeBase64RequestWrapper $request is a request object for operation
      *
@@ -471,7 +471,7 @@ class RecognizeApi
     /**
      * Operation recognizeBase64AsyncWithHttpInfo
      *
-     * Recognize barcode from file in request body using POST requests with parameters in body in json or xml format.
+     * Recognize a barcode from a file in the request body using a POST request with JSON or XML body parameters.
      *
      * @param Requests\RecognizeBase64RequestWrapper $request is a request object for operation
      *
@@ -613,7 +613,7 @@ class RecognizeApi
     /**
      * Operation recognizeMultipart
      *
-     * Recognize barcode from file in request body using POST requests with parameters in multipart form.
+     * Recognize a barcode from a file in the request body using a POST request with multipart form parameters.
      *
      * @param Requests\RecognizeMultipartRequestWrapper $request is a request object for operation
      *
@@ -635,7 +635,7 @@ class RecognizeApi
     /**
      * Operation recognizeMultipartWithHttpInfo
      *
-     * Recognize barcode from file in request body using POST requests with parameters in multipart form.
+     * Recognize a barcode from a file in the request body using a POST request with multipart form parameters.
      *
      * @param Requests\RecognizeMultipartRequestWrapper $request is a request object for operation
      *
@@ -699,7 +699,7 @@ class RecognizeApi
     /**
      * Operation recognizeMultipartAsync
      *
-     * Recognize barcode from file in request body using POST requests with parameters in multipart form.
+     * Recognize a barcode from a file in the request body using a POST request with multipart form parameters.
      *
      * @param Requests\RecognizeMultipartRequestWrapper $request is a request object for operation
      *
@@ -719,7 +719,7 @@ class RecognizeApi
     /**
      * Operation recognizeMultipartAsyncWithHttpInfo
      *
-     * Recognize barcode from file in request body using POST requests with parameters in multipart form.
+     * Recognize a barcode from a file in the request body using a POST request with multipart form parameters.
      *
      * @param Requests\RecognizeMultipartRequestWrapper $request is a request object for operation
      *

@@ -10,7 +10,7 @@ use Aspose\BarCode\ObjectSerializer;
 /**
  * BarcodeResponse
  *
- * @description Represents information about barcode.
+ * @description Represents information about a barcode.
  */
 class BarcodeResponse implements ArrayAccess
 {
@@ -255,7 +255,7 @@ class BarcodeResponse implements ArrayAccess
     /**
      * Sets region
      *
-     * @param \Aspose\BarCode\Model\RegionPoint[] $region Region with barcode.
+     * @param \Aspose\BarCode\Model\RegionPoint[] $region Region with the barcode.
      *
      * @return $this
      */
@@ -279,7 +279,7 @@ class BarcodeResponse implements ArrayAccess
     /**
      * Sets checksum
      *
-     * @param string $checksum Checksum of barcode.
+     * @param string $checksum Checksum of the barcode.
      *
      * @return $this
      */

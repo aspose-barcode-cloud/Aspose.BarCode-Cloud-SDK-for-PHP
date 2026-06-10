@@ -10,7 +10,7 @@ use Aspose\BarCode\ObjectSerializer;
 /**
  * GenerateParams
  *
- * @description Barcode generation parameters
+ * @description Barcode generation parameters.
  */
 class GenerateParams implements ArrayAccess
 {
@@ -31,7 +31,10 @@ class GenerateParams implements ArrayAccess
     protected static array $swaggerTypes = [
         'barcode_type' => '\Aspose\BarCode\Model\EncodeBarcodeType',
         'encode_data' => '\Aspose\BarCode\Model\EncodeData',
-        'barcode_image_params' => '\Aspose\BarCode\Model\BarcodeImageParams'
+        'barcode_image_params' => '\Aspose\BarCode\Model\BarcodeImageParams',
+        'qr_params' => '\Aspose\BarCode\Model\QrParams',
+        'code128_params' => '\Aspose\BarCode\Model\Code128Params',
+        'pdf417_params' => '\Aspose\BarCode\Model\Pdf417Params'
     ];
 
     /**
@@ -42,7 +45,10 @@ class GenerateParams implements ArrayAccess
     protected static array $swaggerFormats = [
         'barcode_type' => null,
         'encode_data' => null,
-        'barcode_image_params' => null
+        'barcode_image_params' => null,
+        'qr_params' => null,
+        'code128_params' => null,
+        'pdf417_params' => null
     ];
 
     /**
@@ -74,7 +80,10 @@ class GenerateParams implements ArrayAccess
     protected static $attributeMap = [
         'barcode_type' => 'barcodeType',
         'encode_data' => 'encodeData',
-        'barcode_image_params' => 'barcodeImageParams'
+        'barcode_image_params' => 'barcodeImageParams',
+        'qr_params' => 'qrParams',
+        'code128_params' => 'code128Params',
+        'pdf417_params' => 'pdf417Params'
     ];
 
     /**
@@ -85,7 +94,10 @@ class GenerateParams implements ArrayAccess
     protected static $setters = [
         'barcode_type' => 'setBarcodeType',
         'encode_data' => 'setEncodeData',
-        'barcode_image_params' => 'setBarcodeImageParams'
+        'barcode_image_params' => 'setBarcodeImageParams',
+        'qr_params' => 'setQrParams',
+        'code128_params' => 'setCode128Params',
+        'pdf417_params' => 'setPdf417Params'
     ];
 
     /**
@@ -96,7 +108,10 @@ class GenerateParams implements ArrayAccess
     protected static $getters = [
         'barcode_type' => 'getBarcodeType',
         'encode_data' => 'getEncodeData',
-        'barcode_image_params' => 'getBarcodeImageParams'
+        'barcode_image_params' => 'getBarcodeImageParams',
+        'qr_params' => 'getQrParams',
+        'code128_params' => 'getCode128Params',
+        'pdf417_params' => 'getPdf417Params'
     ];
 
     /**
@@ -162,6 +177,9 @@ class GenerateParams implements ArrayAccess
         $this->container['barcode_type'] = isset($data['barcode_type']) ? $data['barcode_type'] : null;
         $this->container['encode_data'] = isset($data['encode_data']) ? $data['encode_data'] : null;
         $this->container['barcode_image_params'] = isset($data['barcode_image_params']) ? $data['barcode_image_params'] : null;
+        $this->container['qr_params'] = isset($data['qr_params']) ? $data['qr_params'] : null;
+        $this->container['code128_params'] = isset($data['code128_params']) ? $data['code128_params'] : null;
+        $this->container['pdf417_params'] = isset($data['pdf417_params']) ? $data['pdf417_params'] : null;
     }
 
     /**
@@ -268,6 +286,78 @@ class GenerateParams implements ArrayAccess
     public function setBarcodeImageParams($barcode_image_params)
     {
         $this->container['barcode_image_params'] = $barcode_image_params;
+
+        return $this;
+    }
+
+    /**
+     * Gets qr_params
+     *
+     * @return \Aspose\BarCode\Model\QrParams
+     */
+    public function getQrParams()
+    {
+        return $this->container['qr_params'];
+    }
+
+    /**
+     * Sets qr_params
+     *
+     * @param \Aspose\BarCode\Model\QrParams $qr_params qr_params
+     *
+     * @return $this
+     */
+    public function setQrParams($qr_params)
+    {
+        $this->container['qr_params'] = $qr_params;
+
+        return $this;
+    }
+
+    /**
+     * Gets code128_params
+     *
+     * @return \Aspose\BarCode\Model\Code128Params
+     */
+    public function getCode128Params()
+    {
+        return $this->container['code128_params'];
+    }
+
+    /**
+     * Sets code128_params
+     *
+     * @param \Aspose\BarCode\Model\Code128Params $code128_params code128_params
+     *
+     * @return $this
+     */
+    public function setCode128Params($code128_params)
+    {
+        $this->container['code128_params'] = $code128_params;
+
+        return $this;
+    }
+
+    /**
+     * Gets pdf417_params
+     *
+     * @return \Aspose\BarCode\Model\Pdf417Params
+     */
+    public function getPdf417Params()
+    {
+        return $this->container['pdf417_params'];
+    }
+
+    /**
+     * Sets pdf417_params
+     *
+     * @param \Aspose\BarCode\Model\Pdf417Params $pdf417_params pdf417_params
+     *
+     * @return $this
+     */
+    public function setPdf417Params($pdf417_params)
+    {
+        $this->container['pdf417_params'] = $pdf417_params;
 
         return $this;
     }
