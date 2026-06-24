@@ -333,252 +333,280 @@ class GenerateApi
                 $queryParams[$queryParamName] = ObjectSerializer::toQueryValue($queryParamValue);
             }
         }
-        if (isset($request->image_format)) {
+        $groupValue = $request->barcode_image_params === null ? null : $request->barcode_image_params['image_format'];
+        if (isset($groupValue)) {
             $queryParamName = lcfirst('imageFormat');
-            $queryParamValue = is_bool($request->image_format) ? ($request->image_format ? 'true' : 'false') : $request->image_format;
+            $queryParamValue = is_bool($groupValue) ? ($groupValue ? 'true' : 'false') : $groupValue;
             if (strpos($resourcePath, '{' . $queryParamName . '}') !== false) {
                 $resourcePath = str_replace('{' . $queryParamName . '}', ObjectSerializer::toPathValue($queryParamValue), $resourcePath);
             } else {
                 $queryParams[$queryParamName] = ObjectSerializer::toQueryValue($queryParamValue);
             }
         }
-        if (isset($request->text_location)) {
+        $groupValue = $request->barcode_image_params === null ? null : $request->barcode_image_params['text_location'];
+        if (isset($groupValue)) {
             $queryParamName = lcfirst('textLocation');
-            $queryParamValue = is_bool($request->text_location) ? ($request->text_location ? 'true' : 'false') : $request->text_location;
+            $queryParamValue = is_bool($groupValue) ? ($groupValue ? 'true' : 'false') : $groupValue;
             if (strpos($resourcePath, '{' . $queryParamName . '}') !== false) {
                 $resourcePath = str_replace('{' . $queryParamName . '}', ObjectSerializer::toPathValue($queryParamValue), $resourcePath);
             } else {
                 $queryParams[$queryParamName] = ObjectSerializer::toQueryValue($queryParamValue);
             }
         }
-        if (isset($request->foreground_color)) {
+        $groupValue = $request->barcode_image_params === null ? null : $request->barcode_image_params['foreground_color'];
+        if (isset($groupValue)) {
             $queryParamName = lcfirst('foregroundColor');
-            $queryParamValue = is_bool($request->foreground_color) ? ($request->foreground_color ? 'true' : 'false') : $request->foreground_color;
+            $queryParamValue = is_bool($groupValue) ? ($groupValue ? 'true' : 'false') : $groupValue;
             if (strpos($resourcePath, '{' . $queryParamName . '}') !== false) {
                 $resourcePath = str_replace('{' . $queryParamName . '}', ObjectSerializer::toPathValue($queryParamValue), $resourcePath);
             } else {
                 $queryParams[$queryParamName] = ObjectSerializer::toQueryValue($queryParamValue);
             }
         }
-        if (isset($request->background_color)) {
+        $groupValue = $request->barcode_image_params === null ? null : $request->barcode_image_params['background_color'];
+        if (isset($groupValue)) {
             $queryParamName = lcfirst('backgroundColor');
-            $queryParamValue = is_bool($request->background_color) ? ($request->background_color ? 'true' : 'false') : $request->background_color;
+            $queryParamValue = is_bool($groupValue) ? ($groupValue ? 'true' : 'false') : $groupValue;
             if (strpos($resourcePath, '{' . $queryParamName . '}') !== false) {
                 $resourcePath = str_replace('{' . $queryParamName . '}', ObjectSerializer::toPathValue($queryParamValue), $resourcePath);
             } else {
                 $queryParams[$queryParamName] = ObjectSerializer::toQueryValue($queryParamValue);
             }
         }
-        if (isset($request->units)) {
+        $groupValue = $request->barcode_image_params === null ? null : $request->barcode_image_params['units'];
+        if (isset($groupValue)) {
             $queryParamName = lcfirst('units');
-            $queryParamValue = is_bool($request->units) ? ($request->units ? 'true' : 'false') : $request->units;
+            $queryParamValue = is_bool($groupValue) ? ($groupValue ? 'true' : 'false') : $groupValue;
             if (strpos($resourcePath, '{' . $queryParamName . '}') !== false) {
                 $resourcePath = str_replace('{' . $queryParamName . '}', ObjectSerializer::toPathValue($queryParamValue), $resourcePath);
             } else {
                 $queryParams[$queryParamName] = ObjectSerializer::toQueryValue($queryParamValue);
             }
         }
-        if (isset($request->resolution)) {
+        $groupValue = $request->barcode_image_params === null ? null : $request->barcode_image_params['resolution'];
+        if (isset($groupValue)) {
             $queryParamName = lcfirst('resolution');
-            $queryParamValue = is_bool($request->resolution) ? ($request->resolution ? 'true' : 'false') : $request->resolution;
+            $queryParamValue = is_bool($groupValue) ? ($groupValue ? 'true' : 'false') : $groupValue;
             if (strpos($resourcePath, '{' . $queryParamName . '}') !== false) {
                 $resourcePath = str_replace('{' . $queryParamName . '}', ObjectSerializer::toPathValue($queryParamValue), $resourcePath);
             } else {
                 $queryParams[$queryParamName] = ObjectSerializer::toQueryValue($queryParamValue);
             }
         }
-        if (isset($request->image_height)) {
+        $groupValue = $request->barcode_image_params === null ? null : $request->barcode_image_params['image_height'];
+        if (isset($groupValue)) {
             $queryParamName = lcfirst('imageHeight');
-            $queryParamValue = is_bool($request->image_height) ? ($request->image_height ? 'true' : 'false') : $request->image_height;
+            $queryParamValue = is_bool($groupValue) ? ($groupValue ? 'true' : 'false') : $groupValue;
             if (strpos($resourcePath, '{' . $queryParamName . '}') !== false) {
                 $resourcePath = str_replace('{' . $queryParamName . '}', ObjectSerializer::toPathValue($queryParamValue), $resourcePath);
             } else {
                 $queryParams[$queryParamName] = ObjectSerializer::toQueryValue($queryParamValue);
             }
         }
-        if (isset($request->image_width)) {
+        $groupValue = $request->barcode_image_params === null ? null : $request->barcode_image_params['image_width'];
+        if (isset($groupValue)) {
             $queryParamName = lcfirst('imageWidth');
-            $queryParamValue = is_bool($request->image_width) ? ($request->image_width ? 'true' : 'false') : $request->image_width;
+            $queryParamValue = is_bool($groupValue) ? ($groupValue ? 'true' : 'false') : $groupValue;
             if (strpos($resourcePath, '{' . $queryParamName . '}') !== false) {
                 $resourcePath = str_replace('{' . $queryParamName . '}', ObjectSerializer::toPathValue($queryParamValue), $resourcePath);
             } else {
                 $queryParams[$queryParamName] = ObjectSerializer::toQueryValue($queryParamValue);
             }
         }
-        if (isset($request->rotation_angle)) {
+        $groupValue = $request->barcode_image_params === null ? null : $request->barcode_image_params['rotation_angle'];
+        if (isset($groupValue)) {
             $queryParamName = lcfirst('rotationAngle');
-            $queryParamValue = is_bool($request->rotation_angle) ? ($request->rotation_angle ? 'true' : 'false') : $request->rotation_angle;
+            $queryParamValue = is_bool($groupValue) ? ($groupValue ? 'true' : 'false') : $groupValue;
             if (strpos($resourcePath, '{' . $queryParamName . '}') !== false) {
                 $resourcePath = str_replace('{' . $queryParamName . '}', ObjectSerializer::toPathValue($queryParamValue), $resourcePath);
             } else {
                 $queryParams[$queryParamName] = ObjectSerializer::toQueryValue($queryParamValue);
             }
         }
-        if (isset($request->qr_encode_mode)) {
+        $groupValue = $request->qr_params === null ? null : $request->qr_params['qr_encode_mode'];
+        if (isset($groupValue)) {
             $queryParamName = lcfirst('qrEncodeMode');
-            $queryParamValue = is_bool($request->qr_encode_mode) ? ($request->qr_encode_mode ? 'true' : 'false') : $request->qr_encode_mode;
+            $queryParamValue = is_bool($groupValue) ? ($groupValue ? 'true' : 'false') : $groupValue;
             if (strpos($resourcePath, '{' . $queryParamName . '}') !== false) {
                 $resourcePath = str_replace('{' . $queryParamName . '}', ObjectSerializer::toPathValue($queryParamValue), $resourcePath);
             } else {
                 $queryParams[$queryParamName] = ObjectSerializer::toQueryValue($queryParamValue);
             }
         }
-        if (isset($request->qr_error_level)) {
+        $groupValue = $request->qr_params === null ? null : $request->qr_params['qr_error_level'];
+        if (isset($groupValue)) {
             $queryParamName = lcfirst('qrErrorLevel');
-            $queryParamValue = is_bool($request->qr_error_level) ? ($request->qr_error_level ? 'true' : 'false') : $request->qr_error_level;
+            $queryParamValue = is_bool($groupValue) ? ($groupValue ? 'true' : 'false') : $groupValue;
             if (strpos($resourcePath, '{' . $queryParamName . '}') !== false) {
                 $resourcePath = str_replace('{' . $queryParamName . '}', ObjectSerializer::toPathValue($queryParamValue), $resourcePath);
             } else {
                 $queryParams[$queryParamName] = ObjectSerializer::toQueryValue($queryParamValue);
             }
         }
-        if (isset($request->qr_version)) {
+        $groupValue = $request->qr_params === null ? null : $request->qr_params['qr_version'];
+        if (isset($groupValue)) {
             $queryParamName = lcfirst('qrVersion');
-            $queryParamValue = is_bool($request->qr_version) ? ($request->qr_version ? 'true' : 'false') : $request->qr_version;
+            $queryParamValue = is_bool($groupValue) ? ($groupValue ? 'true' : 'false') : $groupValue;
             if (strpos($resourcePath, '{' . $queryParamName . '}') !== false) {
                 $resourcePath = str_replace('{' . $queryParamName . '}', ObjectSerializer::toPathValue($queryParamValue), $resourcePath);
             } else {
                 $queryParams[$queryParamName] = ObjectSerializer::toQueryValue($queryParamValue);
             }
         }
-        if (isset($request->qr_eci_encoding)) {
+        $groupValue = $request->qr_params === null ? null : $request->qr_params['qr_eci_encoding'];
+        if (isset($groupValue)) {
             $queryParamName = lcfirst('qrECIEncoding');
-            $queryParamValue = is_bool($request->qr_eci_encoding) ? ($request->qr_eci_encoding ? 'true' : 'false') : $request->qr_eci_encoding;
+            $queryParamValue = is_bool($groupValue) ? ($groupValue ? 'true' : 'false') : $groupValue;
             if (strpos($resourcePath, '{' . $queryParamName . '}') !== false) {
                 $resourcePath = str_replace('{' . $queryParamName . '}', ObjectSerializer::toPathValue($queryParamValue), $resourcePath);
             } else {
                 $queryParams[$queryParamName] = ObjectSerializer::toQueryValue($queryParamValue);
             }
         }
-        if (isset($request->qr_aspect_ratio)) {
+        $groupValue = $request->qr_params === null ? null : $request->qr_params['qr_aspect_ratio'];
+        if (isset($groupValue)) {
             $queryParamName = lcfirst('qrAspectRatio');
-            $queryParamValue = is_bool($request->qr_aspect_ratio) ? ($request->qr_aspect_ratio ? 'true' : 'false') : $request->qr_aspect_ratio;
+            $queryParamValue = is_bool($groupValue) ? ($groupValue ? 'true' : 'false') : $groupValue;
             if (strpos($resourcePath, '{' . $queryParamName . '}') !== false) {
                 $resourcePath = str_replace('{' . $queryParamName . '}', ObjectSerializer::toPathValue($queryParamValue), $resourcePath);
             } else {
                 $queryParams[$queryParamName] = ObjectSerializer::toQueryValue($queryParamValue);
             }
         }
-        if (isset($request->micro_qr_version)) {
+        $groupValue = $request->qr_params === null ? null : $request->qr_params['micro_qr_version'];
+        if (isset($groupValue)) {
             $queryParamName = lcfirst('microQRVersion');
-            $queryParamValue = is_bool($request->micro_qr_version) ? ($request->micro_qr_version ? 'true' : 'false') : $request->micro_qr_version;
+            $queryParamValue = is_bool($groupValue) ? ($groupValue ? 'true' : 'false') : $groupValue;
             if (strpos($resourcePath, '{' . $queryParamName . '}') !== false) {
                 $resourcePath = str_replace('{' . $queryParamName . '}', ObjectSerializer::toPathValue($queryParamValue), $resourcePath);
             } else {
                 $queryParams[$queryParamName] = ObjectSerializer::toQueryValue($queryParamValue);
             }
         }
-        if (isset($request->rect_micro_qr_version)) {
+        $groupValue = $request->qr_params === null ? null : $request->qr_params['rect_micro_qr_version'];
+        if (isset($groupValue)) {
             $queryParamName = lcfirst('rectMicroQrVersion');
-            $queryParamValue = is_bool($request->rect_micro_qr_version) ? ($request->rect_micro_qr_version ? 'true' : 'false') : $request->rect_micro_qr_version;
+            $queryParamValue = is_bool($groupValue) ? ($groupValue ? 'true' : 'false') : $groupValue;
             if (strpos($resourcePath, '{' . $queryParamName . '}') !== false) {
                 $resourcePath = str_replace('{' . $queryParamName . '}', ObjectSerializer::toPathValue($queryParamValue), $resourcePath);
             } else {
                 $queryParams[$queryParamName] = ObjectSerializer::toQueryValue($queryParamValue);
             }
         }
-        if (isset($request->code128_encode_mode)) {
+        $groupValue = $request->code128_params === null ? null : $request->code128_params['code128_encode_mode'];
+        if (isset($groupValue)) {
             $queryParamName = lcfirst('code128EncodeMode');
-            $queryParamValue = is_bool($request->code128_encode_mode) ? ($request->code128_encode_mode ? 'true' : 'false') : $request->code128_encode_mode;
+            $queryParamValue = is_bool($groupValue) ? ($groupValue ? 'true' : 'false') : $groupValue;
             if (strpos($resourcePath, '{' . $queryParamName . '}') !== false) {
                 $resourcePath = str_replace('{' . $queryParamName . '}', ObjectSerializer::toPathValue($queryParamValue), $resourcePath);
             } else {
                 $queryParams[$queryParamName] = ObjectSerializer::toQueryValue($queryParamValue);
             }
         }
-        if (isset($request->pdf417_encode_mode)) {
+        $groupValue = $request->pdf417_params === null ? null : $request->pdf417_params['pdf417_encode_mode'];
+        if (isset($groupValue)) {
             $queryParamName = lcfirst('pdf417EncodeMode');
-            $queryParamValue = is_bool($request->pdf417_encode_mode) ? ($request->pdf417_encode_mode ? 'true' : 'false') : $request->pdf417_encode_mode;
+            $queryParamValue = is_bool($groupValue) ? ($groupValue ? 'true' : 'false') : $groupValue;
             if (strpos($resourcePath, '{' . $queryParamName . '}') !== false) {
                 $resourcePath = str_replace('{' . $queryParamName . '}', ObjectSerializer::toPathValue($queryParamValue), $resourcePath);
             } else {
                 $queryParams[$queryParamName] = ObjectSerializer::toQueryValue($queryParamValue);
             }
         }
-        if (isset($request->pdf417_error_level)) {
+        $groupValue = $request->pdf417_params === null ? null : $request->pdf417_params['pdf417_error_level'];
+        if (isset($groupValue)) {
             $queryParamName = lcfirst('pdf417ErrorLevel');
-            $queryParamValue = is_bool($request->pdf417_error_level) ? ($request->pdf417_error_level ? 'true' : 'false') : $request->pdf417_error_level;
+            $queryParamValue = is_bool($groupValue) ? ($groupValue ? 'true' : 'false') : $groupValue;
             if (strpos($resourcePath, '{' . $queryParamName . '}') !== false) {
                 $resourcePath = str_replace('{' . $queryParamName . '}', ObjectSerializer::toPathValue($queryParamValue), $resourcePath);
             } else {
                 $queryParams[$queryParamName] = ObjectSerializer::toQueryValue($queryParamValue);
             }
         }
-        if (isset($request->pdf417_truncate)) {
+        $groupValue = $request->pdf417_params === null ? null : $request->pdf417_params['pdf417_truncate'];
+        if (isset($groupValue)) {
             $queryParamName = lcfirst('pdf417Truncate');
-            $queryParamValue = is_bool($request->pdf417_truncate) ? ($request->pdf417_truncate ? 'true' : 'false') : $request->pdf417_truncate;
+            $queryParamValue = is_bool($groupValue) ? ($groupValue ? 'true' : 'false') : $groupValue;
             if (strpos($resourcePath, '{' . $queryParamName . '}') !== false) {
                 $resourcePath = str_replace('{' . $queryParamName . '}', ObjectSerializer::toPathValue($queryParamValue), $resourcePath);
             } else {
                 $queryParams[$queryParamName] = ObjectSerializer::toQueryValue($queryParamValue);
             }
         }
-        if (isset($request->pdf417_columns)) {
+        $groupValue = $request->pdf417_params === null ? null : $request->pdf417_params['pdf417_columns'];
+        if (isset($groupValue)) {
             $queryParamName = lcfirst('pdf417Columns');
-            $queryParamValue = is_bool($request->pdf417_columns) ? ($request->pdf417_columns ? 'true' : 'false') : $request->pdf417_columns;
+            $queryParamValue = is_bool($groupValue) ? ($groupValue ? 'true' : 'false') : $groupValue;
             if (strpos($resourcePath, '{' . $queryParamName . '}') !== false) {
                 $resourcePath = str_replace('{' . $queryParamName . '}', ObjectSerializer::toPathValue($queryParamValue), $resourcePath);
             } else {
                 $queryParams[$queryParamName] = ObjectSerializer::toQueryValue($queryParamValue);
             }
         }
-        if (isset($request->pdf417_rows)) {
+        $groupValue = $request->pdf417_params === null ? null : $request->pdf417_params['pdf417_rows'];
+        if (isset($groupValue)) {
             $queryParamName = lcfirst('pdf417Rows');
-            $queryParamValue = is_bool($request->pdf417_rows) ? ($request->pdf417_rows ? 'true' : 'false') : $request->pdf417_rows;
+            $queryParamValue = is_bool($groupValue) ? ($groupValue ? 'true' : 'false') : $groupValue;
             if (strpos($resourcePath, '{' . $queryParamName . '}') !== false) {
                 $resourcePath = str_replace('{' . $queryParamName . '}', ObjectSerializer::toPathValue($queryParamValue), $resourcePath);
             } else {
                 $queryParams[$queryParamName] = ObjectSerializer::toQueryValue($queryParamValue);
             }
         }
-        if (isset($request->pdf417_aspect_ratio)) {
+        $groupValue = $request->pdf417_params === null ? null : $request->pdf417_params['pdf417_aspect_ratio'];
+        if (isset($groupValue)) {
             $queryParamName = lcfirst('pdf417AspectRatio');
-            $queryParamValue = is_bool($request->pdf417_aspect_ratio) ? ($request->pdf417_aspect_ratio ? 'true' : 'false') : $request->pdf417_aspect_ratio;
+            $queryParamValue = is_bool($groupValue) ? ($groupValue ? 'true' : 'false') : $groupValue;
             if (strpos($resourcePath, '{' . $queryParamName . '}') !== false) {
                 $resourcePath = str_replace('{' . $queryParamName . '}', ObjectSerializer::toPathValue($queryParamValue), $resourcePath);
             } else {
                 $queryParams[$queryParamName] = ObjectSerializer::toQueryValue($queryParamValue);
             }
         }
-        if (isset($request->pdf417_eci_encoding)) {
+        $groupValue = $request->pdf417_params === null ? null : $request->pdf417_params['pdf417_eci_encoding'];
+        if (isset($groupValue)) {
             $queryParamName = lcfirst('pdf417ECIEncoding');
-            $queryParamValue = is_bool($request->pdf417_eci_encoding) ? ($request->pdf417_eci_encoding ? 'true' : 'false') : $request->pdf417_eci_encoding;
+            $queryParamValue = is_bool($groupValue) ? ($groupValue ? 'true' : 'false') : $groupValue;
             if (strpos($resourcePath, '{' . $queryParamName . '}') !== false) {
                 $resourcePath = str_replace('{' . $queryParamName . '}', ObjectSerializer::toPathValue($queryParamValue), $resourcePath);
             } else {
                 $queryParams[$queryParamName] = ObjectSerializer::toQueryValue($queryParamValue);
             }
         }
-        if (isset($request->pdf417_is_reader_initialization)) {
+        $groupValue = $request->pdf417_params === null ? null : $request->pdf417_params['pdf417_is_reader_initialization'];
+        if (isset($groupValue)) {
             $queryParamName = lcfirst('pdf417IsReaderInitialization');
-            $queryParamValue = is_bool($request->pdf417_is_reader_initialization) ? ($request->pdf417_is_reader_initialization ? 'true' : 'false') : $request->pdf417_is_reader_initialization;
+            $queryParamValue = is_bool($groupValue) ? ($groupValue ? 'true' : 'false') : $groupValue;
             if (strpos($resourcePath, '{' . $queryParamName . '}') !== false) {
                 $resourcePath = str_replace('{' . $queryParamName . '}', ObjectSerializer::toPathValue($queryParamValue), $resourcePath);
             } else {
                 $queryParams[$queryParamName] = ObjectSerializer::toQueryValue($queryParamValue);
             }
         }
-        if (isset($request->pdf417_macro_characters)) {
+        $groupValue = $request->pdf417_params === null ? null : $request->pdf417_params['pdf417_macro_characters'];
+        if (isset($groupValue)) {
             $queryParamName = lcfirst('pdf417MacroCharacters');
-            $queryParamValue = is_bool($request->pdf417_macro_characters) ? ($request->pdf417_macro_characters ? 'true' : 'false') : $request->pdf417_macro_characters;
+            $queryParamValue = is_bool($groupValue) ? ($groupValue ? 'true' : 'false') : $groupValue;
             if (strpos($resourcePath, '{' . $queryParamName . '}') !== false) {
                 $resourcePath = str_replace('{' . $queryParamName . '}', ObjectSerializer::toPathValue($queryParamValue), $resourcePath);
             } else {
                 $queryParams[$queryParamName] = ObjectSerializer::toQueryValue($queryParamValue);
             }
         }
-        if (isset($request->pdf417_is_linked)) {
+        $groupValue = $request->pdf417_params === null ? null : $request->pdf417_params['pdf417_is_linked'];
+        if (isset($groupValue)) {
             $queryParamName = lcfirst('pdf417IsLinked');
-            $queryParamValue = is_bool($request->pdf417_is_linked) ? ($request->pdf417_is_linked ? 'true' : 'false') : $request->pdf417_is_linked;
+            $queryParamValue = is_bool($groupValue) ? ($groupValue ? 'true' : 'false') : $groupValue;
             if (strpos($resourcePath, '{' . $queryParamName . '}') !== false) {
                 $resourcePath = str_replace('{' . $queryParamName . '}', ObjectSerializer::toPathValue($queryParamValue), $resourcePath);
             } else {
                 $queryParams[$queryParamName] = ObjectSerializer::toQueryValue($queryParamValue);
             }
         }
-        if (isset($request->pdf417_is_code128_emulation)) {
+        $groupValue = $request->pdf417_params === null ? null : $request->pdf417_params['pdf417_is_code128_emulation'];
+        if (isset($groupValue)) {
             $queryParamName = lcfirst('pdf417IsCode128Emulation');
-            $queryParamValue = is_bool($request->pdf417_is_code128_emulation) ? ($request->pdf417_is_code128_emulation ? 'true' : 'false') : $request->pdf417_is_code128_emulation;
+            $queryParamValue = is_bool($groupValue) ? ($groupValue ? 'true' : 'false') : $groupValue;
             if (strpos($resourcePath, '{' . $queryParamName . '}') !== false) {
                 $resourcePath = str_replace('{' . $queryParamName . '}', ObjectSerializer::toPathValue($queryParamValue), $resourcePath);
             } else {
@@ -1124,116 +1152,144 @@ class GenerateApi
             $formParams['data'][] = ObjectSerializer::toFormValue($request->data);
         }
 
-        if (isset($request->image_format)) {
-            $formParams['imageFormat'][] = ObjectSerializer::toFormValue($request->image_format);
+        $groupValue = $request->barcode_image_params === null ? null : $request->barcode_image_params['image_format'];
+        if (isset($groupValue)) {
+            $formParams['imageFormat'][] = ObjectSerializer::toFormValue($groupValue);
         }
 
-        if (isset($request->text_location)) {
-            $formParams['textLocation'][] = ObjectSerializer::toFormValue($request->text_location);
+        $groupValue = $request->barcode_image_params === null ? null : $request->barcode_image_params['text_location'];
+        if (isset($groupValue)) {
+            $formParams['textLocation'][] = ObjectSerializer::toFormValue($groupValue);
         }
 
-        if (isset($request->foreground_color)) {
-            $formParams['foregroundColor'][] = ObjectSerializer::toFormValue($request->foreground_color);
+        $groupValue = $request->barcode_image_params === null ? null : $request->barcode_image_params['foreground_color'];
+        if (isset($groupValue)) {
+            $formParams['foregroundColor'][] = ObjectSerializer::toFormValue($groupValue);
         }
 
-        if (isset($request->background_color)) {
-            $formParams['backgroundColor'][] = ObjectSerializer::toFormValue($request->background_color);
+        $groupValue = $request->barcode_image_params === null ? null : $request->barcode_image_params['background_color'];
+        if (isset($groupValue)) {
+            $formParams['backgroundColor'][] = ObjectSerializer::toFormValue($groupValue);
         }
 
-        if (isset($request->units)) {
-            $formParams['units'][] = ObjectSerializer::toFormValue($request->units);
+        $groupValue = $request->barcode_image_params === null ? null : $request->barcode_image_params['units'];
+        if (isset($groupValue)) {
+            $formParams['units'][] = ObjectSerializer::toFormValue($groupValue);
         }
 
-        if (isset($request->resolution)) {
-            $formParams['resolution'][] = ObjectSerializer::toFormValue($request->resolution);
+        $groupValue = $request->barcode_image_params === null ? null : $request->barcode_image_params['resolution'];
+        if (isset($groupValue)) {
+            $formParams['resolution'][] = ObjectSerializer::toFormValue($groupValue);
         }
 
-        if (isset($request->image_height)) {
-            $formParams['imageHeight'][] = ObjectSerializer::toFormValue($request->image_height);
+        $groupValue = $request->barcode_image_params === null ? null : $request->barcode_image_params['image_height'];
+        if (isset($groupValue)) {
+            $formParams['imageHeight'][] = ObjectSerializer::toFormValue($groupValue);
         }
 
-        if (isset($request->image_width)) {
-            $formParams['imageWidth'][] = ObjectSerializer::toFormValue($request->image_width);
+        $groupValue = $request->barcode_image_params === null ? null : $request->barcode_image_params['image_width'];
+        if (isset($groupValue)) {
+            $formParams['imageWidth'][] = ObjectSerializer::toFormValue($groupValue);
         }
 
-        if (isset($request->rotation_angle)) {
-            $formParams['rotationAngle'][] = ObjectSerializer::toFormValue($request->rotation_angle);
+        $groupValue = $request->barcode_image_params === null ? null : $request->barcode_image_params['rotation_angle'];
+        if (isset($groupValue)) {
+            $formParams['rotationAngle'][] = ObjectSerializer::toFormValue($groupValue);
         }
 
-        if (isset($request->qr_encode_mode)) {
-            $formParams['qrEncodeMode'][] = ObjectSerializer::toFormValue($request->qr_encode_mode);
+        $groupValue = $request->qr_params === null ? null : $request->qr_params['qr_encode_mode'];
+        if (isset($groupValue)) {
+            $formParams['qrEncodeMode'][] = ObjectSerializer::toFormValue($groupValue);
         }
 
-        if (isset($request->qr_error_level)) {
-            $formParams['qrErrorLevel'][] = ObjectSerializer::toFormValue($request->qr_error_level);
+        $groupValue = $request->qr_params === null ? null : $request->qr_params['qr_error_level'];
+        if (isset($groupValue)) {
+            $formParams['qrErrorLevel'][] = ObjectSerializer::toFormValue($groupValue);
         }
 
-        if (isset($request->qr_version)) {
-            $formParams['qrVersion'][] = ObjectSerializer::toFormValue($request->qr_version);
+        $groupValue = $request->qr_params === null ? null : $request->qr_params['qr_version'];
+        if (isset($groupValue)) {
+            $formParams['qrVersion'][] = ObjectSerializer::toFormValue($groupValue);
         }
 
-        if (isset($request->qr_eci_encoding)) {
-            $formParams['qrECIEncoding'][] = ObjectSerializer::toFormValue($request->qr_eci_encoding);
+        $groupValue = $request->qr_params === null ? null : $request->qr_params['qr_eci_encoding'];
+        if (isset($groupValue)) {
+            $formParams['qrECIEncoding'][] = ObjectSerializer::toFormValue($groupValue);
         }
 
-        if (isset($request->qr_aspect_ratio)) {
-            $formParams['qrAspectRatio'][] = ObjectSerializer::toFormValue($request->qr_aspect_ratio);
+        $groupValue = $request->qr_params === null ? null : $request->qr_params['qr_aspect_ratio'];
+        if (isset($groupValue)) {
+            $formParams['qrAspectRatio'][] = ObjectSerializer::toFormValue($groupValue);
         }
 
-        if (isset($request->micro_qr_version)) {
-            $formParams['microQRVersion'][] = ObjectSerializer::toFormValue($request->micro_qr_version);
+        $groupValue = $request->qr_params === null ? null : $request->qr_params['micro_qr_version'];
+        if (isset($groupValue)) {
+            $formParams['microQRVersion'][] = ObjectSerializer::toFormValue($groupValue);
         }
 
-        if (isset($request->rect_micro_qr_version)) {
-            $formParams['rectMicroQrVersion'][] = ObjectSerializer::toFormValue($request->rect_micro_qr_version);
+        $groupValue = $request->qr_params === null ? null : $request->qr_params['rect_micro_qr_version'];
+        if (isset($groupValue)) {
+            $formParams['rectMicroQrVersion'][] = ObjectSerializer::toFormValue($groupValue);
         }
 
-        if (isset($request->code128_encode_mode)) {
-            $formParams['code128EncodeMode'][] = ObjectSerializer::toFormValue($request->code128_encode_mode);
+        $groupValue = $request->code128_params === null ? null : $request->code128_params['code128_encode_mode'];
+        if (isset($groupValue)) {
+            $formParams['code128EncodeMode'][] = ObjectSerializer::toFormValue($groupValue);
         }
 
-        if (isset($request->pdf417_encode_mode)) {
-            $formParams['pdf417EncodeMode'][] = ObjectSerializer::toFormValue($request->pdf417_encode_mode);
+        $groupValue = $request->pdf417_params === null ? null : $request->pdf417_params['pdf417_encode_mode'];
+        if (isset($groupValue)) {
+            $formParams['pdf417EncodeMode'][] = ObjectSerializer::toFormValue($groupValue);
         }
 
-        if (isset($request->pdf417_error_level)) {
-            $formParams['pdf417ErrorLevel'][] = ObjectSerializer::toFormValue($request->pdf417_error_level);
+        $groupValue = $request->pdf417_params === null ? null : $request->pdf417_params['pdf417_error_level'];
+        if (isset($groupValue)) {
+            $formParams['pdf417ErrorLevel'][] = ObjectSerializer::toFormValue($groupValue);
         }
 
-        if (isset($request->pdf417_truncate)) {
-            $formParams['pdf417Truncate'][] = ObjectSerializer::toFormValue($request->pdf417_truncate);
+        $groupValue = $request->pdf417_params === null ? null : $request->pdf417_params['pdf417_truncate'];
+        if (isset($groupValue)) {
+            $formParams['pdf417Truncate'][] = ObjectSerializer::toFormValue($groupValue);
         }
 
-        if (isset($request->pdf417_columns)) {
-            $formParams['pdf417Columns'][] = ObjectSerializer::toFormValue($request->pdf417_columns);
+        $groupValue = $request->pdf417_params === null ? null : $request->pdf417_params['pdf417_columns'];
+        if (isset($groupValue)) {
+            $formParams['pdf417Columns'][] = ObjectSerializer::toFormValue($groupValue);
         }
 
-        if (isset($request->pdf417_rows)) {
-            $formParams['pdf417Rows'][] = ObjectSerializer::toFormValue($request->pdf417_rows);
+        $groupValue = $request->pdf417_params === null ? null : $request->pdf417_params['pdf417_rows'];
+        if (isset($groupValue)) {
+            $formParams['pdf417Rows'][] = ObjectSerializer::toFormValue($groupValue);
         }
 
-        if (isset($request->pdf417_aspect_ratio)) {
-            $formParams['pdf417AspectRatio'][] = ObjectSerializer::toFormValue($request->pdf417_aspect_ratio);
+        $groupValue = $request->pdf417_params === null ? null : $request->pdf417_params['pdf417_aspect_ratio'];
+        if (isset($groupValue)) {
+            $formParams['pdf417AspectRatio'][] = ObjectSerializer::toFormValue($groupValue);
         }
 
-        if (isset($request->pdf417_eci_encoding)) {
-            $formParams['pdf417ECIEncoding'][] = ObjectSerializer::toFormValue($request->pdf417_eci_encoding);
+        $groupValue = $request->pdf417_params === null ? null : $request->pdf417_params['pdf417_eci_encoding'];
+        if (isset($groupValue)) {
+            $formParams['pdf417ECIEncoding'][] = ObjectSerializer::toFormValue($groupValue);
         }
 
-        if (isset($request->pdf417_is_reader_initialization)) {
-            $formParams['pdf417IsReaderInitialization'][] = ObjectSerializer::toFormValue($request->pdf417_is_reader_initialization);
+        $groupValue = $request->pdf417_params === null ? null : $request->pdf417_params['pdf417_is_reader_initialization'];
+        if (isset($groupValue)) {
+            $formParams['pdf417IsReaderInitialization'][] = ObjectSerializer::toFormValue($groupValue);
         }
 
-        if (isset($request->pdf417_macro_characters)) {
-            $formParams['pdf417MacroCharacters'][] = ObjectSerializer::toFormValue($request->pdf417_macro_characters);
+        $groupValue = $request->pdf417_params === null ? null : $request->pdf417_params['pdf417_macro_characters'];
+        if (isset($groupValue)) {
+            $formParams['pdf417MacroCharacters'][] = ObjectSerializer::toFormValue($groupValue);
         }
 
-        if (isset($request->pdf417_is_linked)) {
-            $formParams['pdf417IsLinked'][] = ObjectSerializer::toFormValue($request->pdf417_is_linked);
+        $groupValue = $request->pdf417_params === null ? null : $request->pdf417_params['pdf417_is_linked'];
+        if (isset($groupValue)) {
+            $formParams['pdf417IsLinked'][] = ObjectSerializer::toFormValue($groupValue);
         }
 
-        if (isset($request->pdf417_is_code128_emulation)) {
-            $formParams['pdf417IsCode128Emulation'][] = ObjectSerializer::toFormValue($request->pdf417_is_code128_emulation);
+        $groupValue = $request->pdf417_params === null ? null : $request->pdf417_params['pdf417_is_code128_emulation'];
+        if (isset($groupValue)) {
+            $formParams['pdf417IsCode128Emulation'][] = ObjectSerializer::toFormValue($groupValue);
         }
         // body params
         $_tempBody = null;

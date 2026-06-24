@@ -17,20 +17,24 @@ class QRErrorLevel
     /// Enum value LevelL
     /// </summary>
     public const LevelL =  "LevelL";
+    public const LEVEL_L = "LevelL";
 
     /// <summary>
     /// Enum value LevelM
     /// </summary>
     public const LevelM =  "LevelM";
+    public const LEVEL_M = "LevelM";
 
     /// <summary>
     /// Enum value LevelQ
     /// </summary>
     public const LevelQ =  "LevelQ";
+    public const LEVEL_Q = "LevelQ";
 
     /// <summary>
     /// Enum value LevelH
     /// </summary>
     public const LevelH =  "LevelH";
+    public const LEVEL_H = "LevelH";
 
 }

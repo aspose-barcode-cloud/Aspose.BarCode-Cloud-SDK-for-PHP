@@ -291,7 +291,7 @@ class Pdf417Params implements ArrayAccess
     /**
      * Sets pdf417_encode_mode
      *
-     * @param \Aspose\BarCode\Model\Pdf417EncodeMode $pdf417_encode_mode pdf417_encode_mode
+     * @param \Aspose\BarCode\Model\Pdf417EncodeMode $pdf417_encode_mode PDF417 barcode encode mode.
      *
      * @return $this
      */
@@ -315,7 +315,7 @@ class Pdf417Params implements ArrayAccess
     /**
      * Sets pdf417_error_level
      *
-     * @param \Aspose\BarCode\Model\Pdf417ErrorLevel $pdf417_error_level pdf417_error_level
+     * @param \Aspose\BarCode\Model\Pdf417ErrorLevel $pdf417_error_level PDF417 barcode error correction level.
      *
      * @return $this
      */
@@ -459,7 +459,7 @@ class Pdf417Params implements ArrayAccess
     /**
      * Sets pdf417_eci_encoding
      *
-     * @param \Aspose\BarCode\Model\ECIEncodings $pdf417_eci_encoding pdf417_eci_encoding
+     * @param \Aspose\BarCode\Model\ECIEncodings $pdf417_eci_encoding ECI encoding for PDF417 barcode data.
      *
      * @return $this
      */
@@ -507,7 +507,7 @@ class Pdf417Params implements ArrayAccess
     /**
      * Sets pdf417_macro_characters
      *
-     * @param \Aspose\BarCode\Model\MacroCharacter $pdf417_macro_characters pdf417_macro_characters
+     * @param \Aspose\BarCode\Model\MacroCharacter $pdf417_macro_characters Macro character to prepend (structured append).
      *
      * @return $this
      */
@@ -569,7 +569,7 @@ class Pdf417Params implements ArrayAccess
     /**
      * Returns true if offset exists. False otherwise.
      *
-     * @param integer $offset Offset
+     * @param string $offset Offset
      *
      * @return boolean
      */
@@ -581,7 +581,7 @@ class Pdf417Params implements ArrayAccess
     /**
      * Gets offset.
      *
-     * @param integer $offset Offset
+     * @param string $offset Offset
      *
      * @return mixed
      */
@@ -594,8 +594,8 @@ class Pdf417Params implements ArrayAccess
     /**
      * Sets value based on offset.
      *
-     * @param integer $offset Offset
-     * @param mixed   $value  Value to be set
+     * @param string $offset Offset
+     * @param mixed  $value  Value to be set
      *
      * @return void
      */
@@ -611,7 +611,7 @@ class Pdf417Params implements ArrayAccess
     /**
      * Unsets offset.
      *
-     * @param integer $offset Offset
+     * @param string $offset Offset
      *
      * @return void
      */

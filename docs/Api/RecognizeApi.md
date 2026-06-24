@@ -36,10 +36,10 @@ $apiInstance = new Aspose\BarCode\Api\RecognizeApi(
     new GuzzleHttp\Client(),
     $config
 );
-$barcode_type = new \Aspose\BarCode\Model\DecodeBarcodeType(); // \Aspose\BarCode\Model\DecodeBarcodeType | Type of barcode to recognize.
+$barcode_type = new \Aspose\BarCode\Model\\AsposeBarCodeModelDecodeBarcodeType(); // \AsposeBarCodeModelDecodeBarcodeType | Type of barcode to recognize.
 $file_url = 'file_url_example'; // string | URL to the barcode image.
-$recognition_mode = new \Aspose\BarCode\Model\RecognitionMode(); // \Aspose\BarCode\Model\RecognitionMode | Recognition mode.
-$recognition_image_kind = new \Aspose\BarCode\Model\RecognitionImageKind(); // \Aspose\BarCode\Model\RecognitionImageKind | Image kind for recognition.
+$recognition_mode = new \Aspose\BarCode\Model\\AsposeBarCodeModelRecognitionMode(); // \AsposeBarCodeModelRecognitionMode | Recognition mode.
+$recognition_image_kind = new \Aspose\BarCode\Model\\AsposeBarCodeModelRecognitionImageKind(); // \AsposeBarCodeModelRecognitionImageKind | Image kind for recognition.
 
 try {
     $result = $apiInstance->recognize($barcode_type, $file_url, $recognition_mode, $recognition_image_kind);
@@ -53,10 +53,10 @@ try {
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **barcode_type** | [**\Aspose\BarCode\Model\DecodeBarcodeType**](../Model/.md)| Type of barcode to recognize. | |
+| **barcode_type** | [**\AsposeBarCodeModelDecodeBarcodeType**](../Model/.md)| Type of barcode to recognize. | |
 | **file_url** | **string**| URL to the barcode image. | |
-| **recognition_mode** | [**\Aspose\BarCode\Model\RecognitionMode**](../Model/.md)| Recognition mode. | [optional] |
-| **recognition_image_kind** | [**\Aspose\BarCode\Model\RecognitionImageKind**](../Model/.md)| Image kind for recognition. | [optional] |
+| **recognition_mode** | [**\AsposeBarCodeModelRecognitionMode**](../Model/.md)| Recognition mode. | [optional] |
+| **recognition_image_kind** | [**\AsposeBarCodeModelRecognitionImageKind**](../Model/.md)| Image kind for recognition. | [optional] |
 
 ### Return type
 
@@ -158,10 +158,10 @@ $apiInstance = new Aspose\BarCode\Api\RecognizeApi(
     new GuzzleHttp\Client(),
     $config
 );
-$barcode_type = new \Aspose\BarCode\Model\DecodeBarcodeType(); // \Aspose\BarCode\Model\DecodeBarcodeType
+$barcode_type = new \Aspose\BarCode\Model\DecodeBarcodeType(); // \Aspose\BarCode\Model\DecodeBarcodeType | See https://reference.aspose.com/barcode/net/aspose.barcode.barcoderecognition/decodetype/
 $file = '/path/to/file.txt'; // \SplFileObject | Barcode image file.
-$recognition_mode = new \Aspose\BarCode\Model\RecognitionMode(); // \Aspose\BarCode\Model\RecognitionMode
-$recognition_image_kind = new \Aspose\BarCode\Model\RecognitionImageKind(); // \Aspose\BarCode\Model\RecognitionImageKind
+$recognition_mode = new \Aspose\BarCode\Model\RecognitionMode(); // \Aspose\BarCode\Model\RecognitionMode | Recognition mode.
+$recognition_image_kind = new \Aspose\BarCode\Model\RecognitionImageKind(); // \Aspose\BarCode\Model\RecognitionImageKind | Image kind for recognition.
 
 try {
     $result = $apiInstance->recognizeMultipart($barcode_type, $file, $recognition_mode, $recognition_image_kind);
@@ -175,10 +175,10 @@ try {
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **barcode_type** | [**\Aspose\BarCode\Model\DecodeBarcodeType**](../Model/DecodeBarcodeType.md)|  | |
+| **barcode_type** | [**\Aspose\BarCode\Model\DecodeBarcodeType**](../Model/DecodeBarcodeType.md)| See https://reference.aspose.com/barcode/net/aspose.barcode.barcoderecognition/decodetype/ | |
 | **file** | **\SplFileObject****\SplFileObject**| Barcode image file. | |
-| **recognition_mode** | [**\Aspose\BarCode\Model\RecognitionMode**](../Model/RecognitionMode.md)|  | [optional] |
-| **recognition_image_kind** | [**\Aspose\BarCode\Model\RecognitionImageKind**](../Model/RecognitionImageKind.md)|  | [optional] |
+| **recognition_mode** | [**\Aspose\BarCode\Model\RecognitionMode**](../Model/RecognitionMode.md)| Recognition mode. | [optional] |
+| **recognition_image_kind** | [**\Aspose\BarCode\Model\RecognitionImageKind**](../Model/RecognitionImageKind.md)| Image kind for recognition. | [optional] |
 
 ### Return type
 

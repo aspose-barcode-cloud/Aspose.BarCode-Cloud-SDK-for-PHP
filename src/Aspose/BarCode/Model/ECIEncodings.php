@@ -97,31 +97,37 @@ class ECIEncodings
     /// Enum value Shift_JIS
     /// </summary>
     public const Shift_JIS =  "Shift_JIS";
+    public const SHIFT_JIS = "Shift_JIS";
 
     /// <summary>
     /// Enum value Win1250
     /// </summary>
     public const Win1250 =  "Win1250";
+    public const WIN1250 = "Win1250";
 
     /// <summary>
     /// Enum value Win1251
     /// </summary>
     public const Win1251 =  "Win1251";
+    public const WIN1251 = "Win1251";
 
     /// <summary>
     /// Enum value Win1252
     /// </summary>
     public const Win1252 =  "Win1252";
+    public const WIN1252 = "Win1252";
 
     /// <summary>
     /// Enum value Win1256
     /// </summary>
     public const Win1256 =  "Win1256";
+    public const WIN1256 = "Win1256";
 
     /// <summary>
     /// Enum value UTF16BE
     /// </summary>
     public const UTF16BE =  "UTF16BE";
+    public const UTF16_BE = "UTF16BE";
 
     /// <summary>
     /// Enum value UTF8
@@ -137,6 +143,7 @@ class ECIEncodings
     /// Enum value Big5
     /// </summary>
     public const Big5 =  "Big5";
+    public const BIG5 = "Big5";
 
     /// <summary>
     /// Enum value GB2312
@@ -162,16 +169,19 @@ class ECIEncodings
     /// Enum value UTF16LE
     /// </summary>
     public const UTF16LE =  "UTF16LE";
+    public const UTF16_LE = "UTF16LE";
 
     /// <summary>
     /// Enum value UTF32BE
     /// </summary>
     public const UTF32BE =  "UTF32BE";
+    public const UTF32_BE = "UTF32BE";
 
     /// <summary>
     /// Enum value UTF32LE
     /// </summary>
     public const UTF32LE =  "UTF32LE";
+    public const UTF32_LE = "UTF32LE";
 
     /// <summary>
     /// Enum value INVARIANT

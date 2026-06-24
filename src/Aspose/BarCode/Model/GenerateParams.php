@@ -231,7 +231,7 @@ class GenerateParams implements ArrayAccess
     /**
      * Sets barcode_type
      *
-     * @param \Aspose\BarCode\Model\EncodeBarcodeType $barcode_type barcode_type
+     * @param \Aspose\BarCode\Model\EncodeBarcodeType $barcode_type Barcode type.
      *
      * @return $this
      */
@@ -255,7 +255,7 @@ class GenerateParams implements ArrayAccess
     /**
      * Sets encode_data
      *
-     * @param \Aspose\BarCode\Model\EncodeData $encode_data encode_data
+     * @param \Aspose\BarCode\Model\EncodeData $encode_data Data to encode into a barcode.
      *
      * @return $this
      */
@@ -279,7 +279,7 @@ class GenerateParams implements ArrayAccess
     /**
      * Sets barcode_image_params
      *
-     * @param \Aspose\BarCode\Model\BarcodeImageParams $barcode_image_params barcode_image_params
+     * @param \Aspose\BarCode\Model\BarcodeImageParams $barcode_image_params Optional barcode image parameters.
      *
      * @return $this
      */
@@ -303,7 +303,7 @@ class GenerateParams implements ArrayAccess
     /**
      * Sets qr_params
      *
-     * @param \Aspose\BarCode\Model\QrParams $qr_params qr_params
+     * @param \Aspose\BarCode\Model\QrParams $qr_params Optional QR barcode generation parameters.
      *
      * @return $this
      */
@@ -327,7 +327,7 @@ class GenerateParams implements ArrayAccess
     /**
      * Sets code128_params
      *
-     * @param \Aspose\BarCode\Model\Code128Params $code128_params code128_params
+     * @param \Aspose\BarCode\Model\Code128Params $code128_params Optional Code128 barcode generation parameters.
      *
      * @return $this
      */
@@ -351,7 +351,7 @@ class GenerateParams implements ArrayAccess
     /**
      * Sets pdf417_params
      *
-     * @param \Aspose\BarCode\Model\Pdf417Params $pdf417_params pdf417_params
+     * @param \Aspose\BarCode\Model\Pdf417Params $pdf417_params Optional PDF417 barcode generation parameters.
      *
      * @return $this
      */
@@ -365,7 +365,7 @@ class GenerateParams implements ArrayAccess
     /**
      * Returns true if offset exists. False otherwise.
      *
-     * @param integer $offset Offset
+     * @param string $offset Offset
      *
      * @return boolean
      */
@@ -377,7 +377,7 @@ class GenerateParams implements ArrayAccess
     /**
      * Gets offset.
      *
-     * @param integer $offset Offset
+     * @param string $offset Offset
      *
      * @return mixed
      */
@@ -390,8 +390,8 @@ class GenerateParams implements ArrayAccess
     /**
      * Sets value based on offset.
      *
-     * @param integer $offset Offset
-     * @param mixed   $value  Value to be set
+     * @param string $offset Offset
+     * @param mixed  $value  Value to be set
      *
      * @return void
      */
@@ -407,7 +407,7 @@ class GenerateParams implements ArrayAccess
     /**
      * Unsets offset.
      *
-     * @param integer $offset Offset
+     * @param string $offset Offset
      *
      * @return void
      */

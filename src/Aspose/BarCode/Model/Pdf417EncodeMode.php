@@ -17,11 +17,13 @@ class Pdf417EncodeMode
     /// Enum value Auto
     /// </summary>
     public const Auto =  "Auto";
+    public const AUTO = "Auto";
 
     /// <summary>
     /// Enum value Binary
     /// </summary>
     public const Binary =  "Binary";
+    public const BINARY = "Binary";
 
     /// <summary>
     /// Enum value ECI
@@ -32,5 +34,6 @@ class Pdf417EncodeMode
     /// Enum value Extended
     /// </summary>
     public const Extended =  "Extended";
+    public const EXTENDED = "Extended";
 
 }

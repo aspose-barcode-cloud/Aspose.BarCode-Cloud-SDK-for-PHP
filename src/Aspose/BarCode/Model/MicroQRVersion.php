@@ -17,6 +17,7 @@ class MicroQRVersion
     /// Enum value Auto
     /// </summary>
     public const Auto =  "Auto";
+    public const AUTO = "Auto";
 
     /// <summary>
     /// Enum value M1
