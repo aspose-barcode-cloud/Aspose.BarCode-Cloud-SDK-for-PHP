@@ -39,9 +39,11 @@ function main(): void
         EncodeBarcodeType::QR,
         "https://products.aspose.cloud/barcode/family/"
     );
-    $request->foreground_color = "DarkBlue";
-    $request->background_color = "LightGray";
-    $request->image_format = BarcodeImageFormat::Png;
+    $request->barcode_image_params = new BarcodeImageParams([
+        'foreground_color' => "DarkBlue",
+        'background_color' => "LightGray",
+        'image_format' => BarcodeImageFormat::Png
+    ]);
 
     $generated = $generateApi->generate($request);
 

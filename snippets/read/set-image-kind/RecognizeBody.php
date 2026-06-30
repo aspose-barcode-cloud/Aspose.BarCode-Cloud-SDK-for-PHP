@@ -33,7 +33,7 @@ function main()
     $base64Request = new RecognizeBase64Request([
         'barcode_types' => [DecodeBarcodeType::Aztec, DecodeBarcodeType::QR],
         'file_base64' => $imageBase64,
-        'image_kind' => RecognitionImageKind::ScannedDocument
+        'recognition_image_kind' => RecognitionImageKind::ScannedDocument
     ]);
 
     $request = new RecognizeBase64RequestWrapper($base64Request);
