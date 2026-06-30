@@ -6,7 +6,7 @@ require 'vendor/autoload.php';
 
 use Aspose\BarCode\Configuration;
 use Aspose\BarCode\GenerateApi;
-use Aspose\BarCode\Model\{BarcodeImageFormat, CodeLocation, EncodeBarcodeType};
+use Aspose\BarCode\Model\{BarcodeImageFormat, BarcodeImageParams, CodeLocation, EncodeBarcodeType, QrParams, QREncodeMode, QRErrorLevel, QRVersion};
 use Aspose\BarCode\Requests\GenerateRequestWrapper;
 
 function makeConfiguration(): Configuration
@@ -34,13 +34,21 @@ function main(): void
         EncodeBarcodeType::QR,
         'Aspose.BarCode.Cloud'
     );
-    $request->image_format = BarcodeImageFormat::Png;
-    $request->foreground_color = 'Black';
-    $request->background_color = 'White';
-    $request->text_location = CodeLocation::Below;
-    $request->resolution = 300;
-    $request->image_height = 200;
-    $request->image_width = 200;
+    $request->barcode_image_params = new BarcodeImageParams([
+        'image_format' => BarcodeImageFormat::Png,
+        'foreground_color' => 'Black',
+        'background_color' => 'White',
+        'text_location' => CodeLocation::Below,
+        'resolution' => 300,
+        'image_height' => 200,
+        'image_width' => 200
+    ]);
+    $request->qr_params = new QrParams([
+        'qr_encode_mode' => QREncodeMode::Auto,
+        'qr_error_level' => QRErrorLevel::LevelM,
+        'qr_version' => QRVersion::Auto,
+        'qr_aspect_ratio' => 0.75
+    ]);
 
     $generated = $generateApi->generate($request);
 

@@ -189,7 +189,7 @@ class Code128Params implements ArrayAccess
     /**
      * Sets code128_encode_mode
      *
-     * @param \Aspose\BarCode\Model\Code128EncodeMode $code128_encode_mode code128_encode_mode
+     * @param \Aspose\BarCode\Model\Code128EncodeMode $code128_encode_mode Code128 barcode encode mode. Controls which Code 128 subset (A, B, C, or mix) is used.
      *
      * @return $this
      */
@@ -203,7 +203,7 @@ class Code128Params implements ArrayAccess
     /**
      * Returns true if offset exists. False otherwise.
      *
-     * @param integer $offset Offset
+     * @param string $offset Offset
      *
      * @return boolean
      */
@@ -215,7 +215,7 @@ class Code128Params implements ArrayAccess
     /**
      * Gets offset.
      *
-     * @param integer $offset Offset
+     * @param string $offset Offset
      *
      * @return mixed
      */
@@ -228,8 +228,8 @@ class Code128Params implements ArrayAccess
     /**
      * Sets value based on offset.
      *
-     * @param integer $offset Offset
-     * @param mixed   $value  Value to be set
+     * @param string $offset Offset
+     * @param mixed  $value  Value to be set
      *
      * @return void
      */
@@ -245,7 +245,7 @@ class Code128Params implements ArrayAccess
     /**
      * Unsets offset.
      *
-     * @param integer $offset Offset
+     * @param string $offset Offset
      *
      * @return void
      */

@@ -189,7 +189,7 @@ class BarcodeImageParams implements ArrayAccess
      */
     public function __construct(?array $data = null)
     {
-        $this->container['image_format'] = isset($data['image_format']) ? $data['image_format'] : null;
+        $this->container['image_format'] = isset($data['image_format']) ? $data['image_format'] : BarcodeImageFormat::PNG;
         $this->container['text_location'] = isset($data['text_location']) ? $data['text_location'] : null;
         $this->container['foreground_color'] = isset($data['foreground_color']) ? $data['foreground_color'] : 'Black';
         $this->container['background_color'] = isset($data['background_color']) ? $data['background_color'] : 'White';
@@ -251,7 +251,7 @@ class BarcodeImageParams implements ArrayAccess
     /**
      * Sets image_format
      *
-     * @param \Aspose\BarCode\Model\BarcodeImageFormat $image_format image_format
+     * @param \Aspose\BarCode\Model\BarcodeImageFormat $image_format Barcode output image format. Default value: png.
      *
      * @return $this
      */
@@ -275,7 +275,7 @@ class BarcodeImageParams implements ArrayAccess
     /**
      * Sets text_location
      *
-     * @param \Aspose\BarCode\Model\CodeLocation $text_location text_location
+     * @param \Aspose\BarCode\Model\CodeLocation $text_location Specify the displayed text location. Set to CodeLocation.None to hide CodeText. Default value depends on BarcodeType: CodeLocation.Below for 1D barcodes and CodeLocation.None for 2D barcodes.
      *
      * @return $this
      */
@@ -347,7 +347,7 @@ class BarcodeImageParams implements ArrayAccess
     /**
      * Sets units
      *
-     * @param \Aspose\BarCode\Model\GraphicsUnit $units units
+     * @param \Aspose\BarCode\Model\GraphicsUnit $units Common units for all measurements. Default units: pixels.
      *
      * @return $this
      */
@@ -465,7 +465,7 @@ class BarcodeImageParams implements ArrayAccess
     /**
      * Returns true if offset exists. False otherwise.
      *
-     * @param integer $offset Offset
+     * @param string $offset Offset
      *
      * @return boolean
      */
@@ -477,7 +477,7 @@ class BarcodeImageParams implements ArrayAccess
     /**
      * Gets offset.
      *
-     * @param integer $offset Offset
+     * @param string $offset Offset
      *
      * @return mixed
      */
@@ -490,8 +490,8 @@ class BarcodeImageParams implements ArrayAccess
     /**
      * Sets value based on offset.
      *
-     * @param integer $offset Offset
-     * @param mixed   $value  Value to be set
+     * @param string $offset Offset
+     * @param mixed  $value  Value to be set
      *
      * @return void
      */
@@ -507,7 +507,7 @@ class BarcodeImageParams implements ArrayAccess
     /**
      * Unsets offset.
      *
-     * @param integer $offset Offset
+     * @param string $offset Offset
      *
      * @return void
      */

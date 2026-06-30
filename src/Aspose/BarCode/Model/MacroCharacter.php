@@ -17,15 +17,18 @@ class MacroCharacter
     /// Enum value None
     /// </summary>
     public const None =  "None";
+    public const NONE = "None";
 
     /// <summary>
     /// Enum value Macro05
     /// </summary>
     public const Macro05 =  "Macro05";
+    public const MACRO05 = "Macro05";
 
     /// <summary>
     /// Enum value Macro06
     /// </summary>
     public const Macro06 =  "Macro06";
+    public const MACRO06 = "Macro06";
 
 }

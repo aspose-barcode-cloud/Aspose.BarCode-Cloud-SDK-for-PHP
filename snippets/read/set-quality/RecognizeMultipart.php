@@ -31,7 +31,7 @@ function main()
 
     $request = new RecognizeMultipartRequestWrapper(DecodeBarcodeType::Aztec, $file);
     $request->recognition_mode = RecognitionMode::Normal;
-    $request->image_kind = RecognitionImageKind::ScannedDocument;
+    $request->recognition_image_kind = RecognitionImageKind::ScannedDocument;
 
     $result = $recognizeApi->recognizeMultipart($request);
 

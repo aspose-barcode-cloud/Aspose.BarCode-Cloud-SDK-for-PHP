@@ -7,7 +7,7 @@ require 'vendor/autoload.php';
 use Aspose\BarCode\Configuration;
 use Aspose\BarCode\GenerateApi;
 use Aspose\BarCode\Requests\GenerateMultipartRequestWrapper;
-use Aspose\BarCode\Model\{EncodeBarcodeType, EncodeDataType};
+use Aspose\BarCode\Model\{EncodeBarcodeType, EncodeDataType, Code128Params, Code128EncodeMode};
 
 function makeConfiguration(): Configuration
 {
@@ -32,6 +32,9 @@ function main(): void
 
     $formRequest = new GenerateMultipartRequestWrapper(EncodeBarcodeType::Code128, "4173706F73652E426172436F64652E436C6F7564");
     $formRequest->data_type = EncodeDataType::HexBytes;
+    $formRequest->code128_params = new Code128Params([
+        'code128_encode_mode' => Code128EncodeMode::Auto
+    ]);
 
     $generated = $generateApi->generateMultipart($formRequest);
 

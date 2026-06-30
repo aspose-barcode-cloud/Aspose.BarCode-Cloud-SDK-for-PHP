@@ -29,7 +29,7 @@ function main()
     $fileName = __DIR__ . '/../testdata/Pdf417.png';
     $file = new SplFileObject($fileName, 'rb');
     $request = new RecognizeMultipartRequestWrapper(DecodeBarcodeType::MostCommonlyUsed, $file);
-    $request->image_kind = RecognitionImageKind::ClearImage;
+    $request->recognition_image_kind = RecognitionImageKind::ClearImage;
 
     $result = $recognizeApi->recognizeMultipart($request);
 

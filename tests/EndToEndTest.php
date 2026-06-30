@@ -8,6 +8,7 @@ use Aspose\BarCode\Model\DecodeBarcodeType;
 use Aspose\BarCode\Model\EncodeBarcodeType;
 use Aspose\BarCode\Model\EncodeDataType;
 use Aspose\BarCode\Model\BarcodeImageFormat;
+use Aspose\BarCode\Model\BarcodeImageParams;
 use Aspose\BarCode\Requests\GenerateRequestWrapper;
 use Aspose\BarCode\Requests\ScanMultipartRequestWrapper;
 use PHPUnit\Framework\TestCase;
@@ -25,7 +26,8 @@ final class EndToEndTest extends TestCase
 
         // Generate
         $genRequest = new GenerateRequestWrapper(EncodeBarcodeType::QR, 'PHP SDK Test');
-        $genRequest->image_format = BarcodeImageFormat::Png;
+        $genRequest->barcode_image_params = new BarcodeImageParams();
+        $genRequest->barcode_image_params->setImageFormat(BarcodeImageFormat::Png);
 
         $genResponse = $genApi->generate($genRequest);
 

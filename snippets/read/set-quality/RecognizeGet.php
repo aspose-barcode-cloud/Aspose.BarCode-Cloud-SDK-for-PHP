@@ -28,7 +28,7 @@ function main()
 
     $request = new RecognizeRequestWrapper(DecodeBarcodeType::QR, "https://products.aspose.app/barcode/scan/img/how-to/scan/step2.png");
     $request->recognition_mode = RecognitionMode::Fast;
-    $request->image_kind = RecognitionImageKind::Photo;
+    $request->recognition_image_kind = RecognitionImageKind::Photo;
 
     $result = $recognizeApi->recognize($request);
 

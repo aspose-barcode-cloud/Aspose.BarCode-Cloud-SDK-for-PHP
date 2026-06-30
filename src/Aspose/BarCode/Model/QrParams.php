@@ -239,7 +239,7 @@ class QrParams implements ArrayAccess
     /**
      * Sets qr_encode_mode
      *
-     * @param \Aspose\BarCode\Model\QREncodeMode $qr_encode_mode qr_encode_mode
+     * @param \Aspose\BarCode\Model\QREncodeMode $qr_encode_mode QR barcode encode mode.
      *
      * @return $this
      */
@@ -263,7 +263,7 @@ class QrParams implements ArrayAccess
     /**
      * Sets qr_error_level
      *
-     * @param \Aspose\BarCode\Model\QRErrorLevel $qr_error_level qr_error_level
+     * @param \Aspose\BarCode\Model\QRErrorLevel $qr_error_level QR barcode error correction level.
      *
      * @return $this
      */
@@ -287,7 +287,7 @@ class QrParams implements ArrayAccess
     /**
      * Sets qr_version
      *
-     * @param \Aspose\BarCode\Model\QRVersion $qr_version qr_version
+     * @param \Aspose\BarCode\Model\QRVersion $qr_version QR barcode version. Automatically selects the smallest version that fits the data.
      *
      * @return $this
      */
@@ -311,7 +311,7 @@ class QrParams implements ArrayAccess
     /**
      * Sets qr_eci_encoding
      *
-     * @param \Aspose\BarCode\Model\ECIEncodings $qr_eci_encoding qr_eci_encoding
+     * @param \Aspose\BarCode\Model\ECIEncodings $qr_eci_encoding ECI encoding for QR barcode data.
      *
      * @return $this
      */
@@ -367,7 +367,7 @@ class QrParams implements ArrayAccess
     /**
      * Sets micro_qr_version
      *
-     * @param \Aspose\BarCode\Model\MicroQRVersion $micro_qr_version micro_qr_version
+     * @param \Aspose\BarCode\Model\MicroQRVersion $micro_qr_version MicroQR barcode version. Used when BarcodeType is MicroQR.
      *
      * @return $this
      */
@@ -391,7 +391,7 @@ class QrParams implements ArrayAccess
     /**
      * Sets rect_micro_qr_version
      *
-     * @param \Aspose\BarCode\Model\RectMicroQRVersion $rect_micro_qr_version rect_micro_qr_version
+     * @param \Aspose\BarCode\Model\RectMicroQRVersion $rect_micro_qr_version RectMicroQR barcode version. Used when BarcodeType is RectMicroQR.
      *
      * @return $this
      */
@@ -405,7 +405,7 @@ class QrParams implements ArrayAccess
     /**
      * Returns true if offset exists. False otherwise.
      *
-     * @param integer $offset Offset
+     * @param string $offset Offset
      *
      * @return boolean
      */
@@ -417,7 +417,7 @@ class QrParams implements ArrayAccess
     /**
      * Gets offset.
      *
-     * @param integer $offset Offset
+     * @param string $offset Offset
      *
      * @return mixed
      */
@@ -430,8 +430,8 @@ class QrParams implements ArrayAccess
     /**
      * Sets value based on offset.
      *
-     * @param integer $offset Offset
-     * @param mixed   $value  Value to be set
+     * @param string $offset Offset
+     * @param mixed  $value  Value to be set
      *
      * @return void
      */
@@ -447,7 +447,7 @@ class QrParams implements ArrayAccess
     /**
      * Unsets offset.
      *
-     * @param integer $offset Offset
+     * @param string $offset Offset
      *
      * @return void
      */
