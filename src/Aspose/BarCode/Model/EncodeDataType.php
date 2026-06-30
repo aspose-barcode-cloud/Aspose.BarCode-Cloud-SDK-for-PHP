@@ -9,7 +9,7 @@ use Aspose\BarCode\ObjectSerializer;
 /**
  * EncodeDataType
  *
- * @description Types of data can be encoded to barcode
+ * @description Types of data that can be encoded into a barcode.
  */
 class EncodeDataType
 {
@@ -17,15 +17,18 @@ class EncodeDataType
     /// Enum value StringData
     /// </summary>
     public const StringData =  "StringData";
+    public const STRING_DATA = "StringData";
 
     /// <summary>
     /// Enum value Base64Bytes
     /// </summary>
     public const Base64Bytes =  "Base64Bytes";
+    public const BASE64_BYTES = "Base64Bytes";
 
     /// <summary>
     /// Enum value HexBytes
     /// </summary>
     public const HexBytes =  "HexBytes";
+    public const HEX_BYTES = "HexBytes";
 
 }

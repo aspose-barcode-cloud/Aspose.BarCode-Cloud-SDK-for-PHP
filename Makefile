@@ -35,3 +35,4 @@ format-doc:
 .PHONY: after-gen
 after-gen: format insert-example format-doc
 	./scripts/add-deprecation-warnings.bash
+	./scripts/add-screaming-snake-enum-aliases.bash

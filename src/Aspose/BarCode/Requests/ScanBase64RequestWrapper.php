@@ -20,7 +20,7 @@ class ScanBase64RequestWrapper
     /**
      * Initializes a new instance of the ScanBase64RequestWrapper class.
      *
-     * @param \Aspose\BarCode\Model\ScanBase64Request $scan_base64_request Barcode scan request
+     * @param \Aspose\BarCode\Model\ScanBase64Request $scan_base64_request Barcode scan request.
      */
     public function __construct($scan_base64_request)
     {
@@ -28,7 +28,7 @@ class ScanBase64RequestWrapper
     }
 
     /**
-     * Barcode scan request
+     * Barcode scan request.
      */
     public $scan_base64_request;
 }

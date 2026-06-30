@@ -10,7 +10,7 @@ use Aspose\BarCode\ObjectSerializer;
 /**
  * RecognizeBase64Request
  *
- * @description Barcode recognize request
+ * @description Barcode recognition request.
  */
 class RecognizeBase64Request implements ArrayAccess
 {
@@ -233,7 +233,7 @@ class RecognizeBase64Request implements ArrayAccess
     /**
      * Sets barcode_types
      *
-     * @param \Aspose\BarCode\Model\DecodeBarcodeType[] $barcode_types Array of decode types to find on barcode
+     * @param \Aspose\BarCode\Model\DecodeBarcodeType[] $barcode_types Array of barcode decode types to find.
      *
      * @return $this
      */
@@ -288,7 +288,7 @@ class RecognizeBase64Request implements ArrayAccess
     /**
      * Sets recognition_mode
      *
-     * @param \Aspose\BarCode\Model\RecognitionMode $recognition_mode recognition_mode
+     * @param \Aspose\BarCode\Model\RecognitionMode $recognition_mode Barcode recognition mode.
      *
      * @return $this
      */
@@ -312,7 +312,7 @@ class RecognizeBase64Request implements ArrayAccess
     /**
      * Sets recognition_image_kind
      *
-     * @param \Aspose\BarCode\Model\RecognitionImageKind $recognition_image_kind recognition_image_kind
+     * @param \Aspose\BarCode\Model\RecognitionImageKind $recognition_image_kind Image kind for recognition.
      *
      * @return $this
      */
@@ -326,7 +326,7 @@ class RecognizeBase64Request implements ArrayAccess
     /**
      * Returns true if offset exists. False otherwise.
      *
-     * @param integer $offset Offset
+     * @param string $offset Offset
      *
      * @return boolean
      */
@@ -338,7 +338,7 @@ class RecognizeBase64Request implements ArrayAccess
     /**
      * Gets offset.
      *
-     * @param integer $offset Offset
+     * @param string $offset Offset
      *
      * @return mixed
      */
@@ -351,8 +351,8 @@ class RecognizeBase64Request implements ArrayAccess
     /**
      * Sets value based on offset.
      *
-     * @param integer $offset Offset
-     * @param mixed   $value  Value to be set
+     * @param string $offset Offset
+     * @param mixed  $value  Value to be set
      *
      * @return void
      */
@@ -368,7 +368,7 @@ class RecognizeBase64Request implements ArrayAccess
     /**
      * Unsets offset.
      *
-     * @param integer $offset Offset
+     * @param string $offset Offset
      *
      * @return void
      */

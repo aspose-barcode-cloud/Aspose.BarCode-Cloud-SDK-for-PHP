@@ -10,7 +10,7 @@ use Aspose\BarCode\ObjectSerializer;
 /**
  * BarcodeResponseList
  *
- * @description Represents information about barcode list.
+ * @description Represents information about a barcode list.
  */
 class BarcodeResponseList implements ArrayAccess
 {
@@ -195,7 +195,7 @@ class BarcodeResponseList implements ArrayAccess
     /**
      * Sets barcodes
      *
-     * @param \Aspose\BarCode\Model\BarcodeResponse[] $barcodes List of barcodes which are present in image.
+     * @param \Aspose\BarCode\Model\BarcodeResponse[] $barcodes List of barcodes that are present in the image.
      *
      * @return $this
      */
@@ -209,7 +209,7 @@ class BarcodeResponseList implements ArrayAccess
     /**
      * Returns true if offset exists. False otherwise.
      *
-     * @param integer $offset Offset
+     * @param string $offset Offset
      *
      * @return boolean
      */
@@ -221,7 +221,7 @@ class BarcodeResponseList implements ArrayAccess
     /**
      * Gets offset.
      *
-     * @param integer $offset Offset
+     * @param string $offset Offset
      *
      * @return mixed
      */
@@ -234,8 +234,8 @@ class BarcodeResponseList implements ArrayAccess
     /**
      * Sets value based on offset.
      *
-     * @param integer $offset Offset
-     * @param mixed   $value  Value to be set
+     * @param string $offset Offset
+     * @param mixed  $value  Value to be set
      *
      * @return void
      */
@@ -251,7 +251,7 @@ class BarcodeResponseList implements ArrayAccess
     /**
      * Unsets offset.
      *
-     * @param integer $offset Offset
+     * @param string $offset Offset
      *
      * @return void
      */

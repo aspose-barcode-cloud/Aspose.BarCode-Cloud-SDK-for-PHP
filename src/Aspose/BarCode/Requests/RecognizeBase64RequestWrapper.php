@@ -20,7 +20,7 @@ class RecognizeBase64RequestWrapper
     /**
      * Initializes a new instance of the RecognizeBase64RequestWrapper class.
      *
-     * @param \Aspose\BarCode\Model\RecognizeBase64Request $recognize_base64_request Barcode recognition request
+     * @param \Aspose\BarCode\Model\RecognizeBase64Request $recognize_base64_request Barcode recognition request.
      */
     public function __construct($recognize_base64_request)
     {
@@ -28,7 +28,7 @@ class RecognizeBase64RequestWrapper
     }
 
     /**
-     * Barcode recognition request
+     * Barcode recognition request.
      */
     public $recognize_base64_request;
 }

@@ -20,10 +20,10 @@ class RecognizeMultipartRequestWrapper
     /**
      * Initializes a new instance of the RecognizeMultipartRequestWrapper class.
      *
-     * @param \Aspose\BarCode\Model\DecodeBarcodeType $barcode_type
-     * @param \SplFileObject $file Barcode image file
-     * @param \Aspose\BarCode\Model\RecognitionMode $recognition_mode
-     * @param \Aspose\BarCode\Model\RecognitionImageKind $recognition_image_kind
+     * @param \Aspose\BarCode\Model\DecodeBarcodeType $barcode_type See https://reference.aspose.com/barcode/net/aspose.barcode.barcoderecognition/decodetype/
+     * @param \SplFileObject $file Barcode image file.
+     * @param \Aspose\BarCode\Model\RecognitionMode $recognition_mode Recognition mode.
+     * @param \Aspose\BarCode\Model\RecognitionImageKind $recognition_image_kind Image kind for recognition.
      */
     public function __construct($barcode_type, $file, $recognition_mode = null, $recognition_image_kind = null)
     {
@@ -34,22 +34,22 @@ class RecognizeMultipartRequestWrapper
     }
 
     /**
-     * Gets or sets barcode_type
+     * See https://reference.aspose.com/barcode/net/aspose.barcode.barcoderecognition/decodetype/
      */
     public $barcode_type;
 
     /**
-     * Barcode image file
+     * Barcode image file.
      */
     public $file;
 
     /**
-     * Gets or sets recognition_mode
+     * Recognition mode.
      */
     public $recognition_mode;
 
     /**
-     * Gets or sets recognition_image_kind
+     * Image kind for recognition.
      */
     public $recognition_image_kind;
 }

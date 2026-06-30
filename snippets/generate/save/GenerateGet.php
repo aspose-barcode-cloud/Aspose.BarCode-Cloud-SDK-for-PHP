@@ -6,7 +6,7 @@ require 'vendor/autoload.php';
 
 use Aspose\BarCode\Configuration;
 use Aspose\BarCode\GenerateApi;
-use Aspose\BarCode\Model\{BarcodeImageFormat, EncodeBarcodeType};
+use Aspose\BarCode\Model\{BarcodeImageFormat, BarcodeImageParams, Code128Params, Code128EncodeMode, EncodeBarcodeType};
 use Aspose\BarCode\Requests\GenerateRequestWrapper;
 
 function makeConfiguration(): Configuration
@@ -31,7 +31,12 @@ function main(): void
     $generateApi = new GenerateApi(null, makeConfiguration());
 
     $request = new GenerateRequestWrapper(EncodeBarcodeType::Code128, "Aspose.BarCode.Cloud");
-    $request->image_format = BarcodeImageFormat::Png;
+    $request->barcode_image_params = new BarcodeImageParams([
+        'image_format' => BarcodeImageFormat::Png
+    ]);
+    $request->code128_params = new Code128Params([
+        'code128_encode_mode' => Code128EncodeMode::Auto
+    ]);
 
     $generated = $generateApi->generate($request);
 

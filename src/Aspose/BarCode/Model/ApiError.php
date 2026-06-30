@@ -321,7 +321,7 @@ class ApiError implements ArrayAccess
     /**
      * Sets inner_error
      *
-     * @param \Aspose\BarCode\Model\ApiError $inner_error inner_error
+     * @param \Aspose\BarCode\Model\ApiError $inner_error Gets or sets inner error.
      *
      * @return $this
      */
@@ -335,7 +335,7 @@ class ApiError implements ArrayAccess
     /**
      * Returns true if offset exists. False otherwise.
      *
-     * @param integer $offset Offset
+     * @param string $offset Offset
      *
      * @return boolean
      */
@@ -347,7 +347,7 @@ class ApiError implements ArrayAccess
     /**
      * Gets offset.
      *
-     * @param integer $offset Offset
+     * @param string $offset Offset
      *
      * @return mixed
      */
@@ -360,8 +360,8 @@ class ApiError implements ArrayAccess
     /**
      * Sets value based on offset.
      *
-     * @param integer $offset Offset
-     * @param mixed   $value  Value to be set
+     * @param string $offset Offset
+     * @param mixed  $value  Value to be set
      *
      * @return void
      */
@@ -377,7 +377,7 @@ class ApiError implements ArrayAccess
     /**
      * Unsets offset.
      *
-     * @param integer $offset Offset
+     * @param string $offset Offset
      *
      * @return void
      */

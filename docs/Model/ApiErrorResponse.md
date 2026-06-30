@@ -6,7 +6,7 @@ ApiError Response
 Name | Type | Description | Notes
 ---- | ---- | ----------- | -----
 **request_id** | **string** | Gets or sets request Id. | 
-**error** | [**\Aspose\BarCode\Model\ApiError**](ApiError.md) |  | 
+**error** | [**\Aspose\BarCode\Model\ApiError**](ApiError.md) | Gets or sets error. | 
 
 [[Back to Model list]](../../README.md#documentation-for-models) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to README]](../../README.md)
 

@@ -90,7 +90,7 @@ class ScanApi
     /**
      * Operation scan
      *
-     * Scan barcode from file on server in the Internet using GET requests with parameter in query string. For scaning files from your hard drive use `scan-body` or `scan-multipart` endpoints instead.
+     * Scan a barcode from a file on an Internet server using a GET request with a query string parameter. For scanning files from your hard drive, use `scan-body` or `scan-multipart` endpoints instead.
      *
      * @param Requests\ScanRequestWrapper $request is a request object for operation
      *
@@ -112,7 +112,7 @@ class ScanApi
     /**
      * Operation scanWithHttpInfo
      *
-     * Scan barcode from file on server in the Internet using GET requests with parameter in query string. For scaning files from your hard drive use `scan-body` or `scan-multipart` endpoints instead.
+     * Scan a barcode from a file on an Internet server using a GET request with a query string parameter. For scanning files from your hard drive, use `scan-body` or `scan-multipart` endpoints instead.
      *
      * @param Requests\ScanRequestWrapper $request is a request object for operation
      *
@@ -176,7 +176,7 @@ class ScanApi
     /**
      * Operation scanAsync
      *
-     * Scan barcode from file on server in the Internet using GET requests with parameter in query string. For scaning files from your hard drive use `scan-body` or `scan-multipart` endpoints instead.
+     * Scan a barcode from a file on an Internet server using a GET request with a query string parameter. For scanning files from your hard drive, use `scan-body` or `scan-multipart` endpoints instead.
      *
      * @param Requests\ScanRequestWrapper $request is a request object for operation
      *
@@ -196,7 +196,7 @@ class ScanApi
     /**
      * Operation scanAsyncWithHttpInfo
      *
-     * Scan barcode from file on server in the Internet using GET requests with parameter in query string. For scaning files from your hard drive use `scan-body` or `scan-multipart` endpoints instead.
+     * Scan a barcode from a file on an Internet server using a GET request with a query string parameter. For scanning files from your hard drive, use `scan-body` or `scan-multipart` endpoints instead.
      *
      * @param Requests\ScanRequestWrapper $request is a request object for operation
      *
@@ -334,7 +334,7 @@ class ScanApi
     /**
      * Operation scanBase64
      *
-     * Scan barcode from file in request body using POST requests with parameter in body in json or xml format.
+     * Scan a barcode from a file in the request body using a POST request with a JSON or XML body parameter.
      *
      * @param Requests\ScanBase64RequestWrapper $request is a request object for operation
      *
@@ -356,7 +356,7 @@ class ScanApi
     /**
      * Operation scanBase64WithHttpInfo
      *
-     * Scan barcode from file in request body using POST requests with parameter in body in json or xml format.
+     * Scan a barcode from a file in the request body using a POST request with a JSON or XML body parameter.
      *
      * @param Requests\ScanBase64RequestWrapper $request is a request object for operation
      *
@@ -420,7 +420,7 @@ class ScanApi
     /**
      * Operation scanBase64Async
      *
-     * Scan barcode from file in request body using POST requests with parameter in body in json or xml format.
+     * Scan a barcode from a file in the request body using a POST request with a JSON or XML body parameter.
      *
      * @param Requests\ScanBase64RequestWrapper $request is a request object for operation
      *
@@ -440,7 +440,7 @@ class ScanApi
     /**
      * Operation scanBase64AsyncWithHttpInfo
      *
-     * Scan barcode from file in request body using POST requests with parameter in body in json or xml format.
+     * Scan a barcode from a file in the request body using a POST request with a JSON or XML body parameter.
      *
      * @param Requests\ScanBase64RequestWrapper $request is a request object for operation
      *
@@ -582,7 +582,7 @@ class ScanApi
     /**
      * Operation scanMultipart
      *
-     * Scan barcode from file in request body using POST requests with parameter in multipart form.
+     * Scan a barcode from a file in the request body using a POST request with a multipart form parameter.
      *
      * @param Requests\ScanMultipartRequestWrapper $request is a request object for operation
      *
@@ -604,7 +604,7 @@ class ScanApi
     /**
      * Operation scanMultipartWithHttpInfo
      *
-     * Scan barcode from file in request body using POST requests with parameter in multipart form.
+     * Scan a barcode from a file in the request body using a POST request with a multipart form parameter.
      *
      * @param Requests\ScanMultipartRequestWrapper $request is a request object for operation
      *
@@ -668,7 +668,7 @@ class ScanApi
     /**
      * Operation scanMultipartAsync
      *
-     * Scan barcode from file in request body using POST requests with parameter in multipart form.
+     * Scan a barcode from a file in the request body using a POST request with a multipart form parameter.
      *
      * @param Requests\ScanMultipartRequestWrapper $request is a request object for operation
      *
@@ -688,7 +688,7 @@ class ScanApi
     /**
      * Operation scanMultipartAsyncWithHttpInfo
      *
-     * Scan barcode from file in request body using POST requests with parameter in multipart form.
+     * Scan a barcode from a file in the request body using a POST request with a multipart form parameter.
      *
      * @param Requests\ScanMultipartRequestWrapper $request is a request object for operation
      *

@@ -10,7 +10,7 @@ use Aspose\BarCode\ObjectSerializer;
 /**
  * BarcodeImageParams
  *
- * @description Barcode image optional parameters
+ * @description Optional barcode image parameters.
  */
 class BarcodeImageParams implements ArrayAccess
 {
@@ -189,7 +189,7 @@ class BarcodeImageParams implements ArrayAccess
      */
     public function __construct(?array $data = null)
     {
-        $this->container['image_format'] = isset($data['image_format']) ? $data['image_format'] : null;
+        $this->container['image_format'] = isset($data['image_format']) ? $data['image_format'] : BarcodeImageFormat::PNG;
         $this->container['text_location'] = isset($data['text_location']) ? $data['text_location'] : null;
         $this->container['foreground_color'] = isset($data['foreground_color']) ? $data['foreground_color'] : 'Black';
         $this->container['background_color'] = isset($data['background_color']) ? $data['background_color'] : 'White';
@@ -251,7 +251,7 @@ class BarcodeImageParams implements ArrayAccess
     /**
      * Sets image_format
      *
-     * @param \Aspose\BarCode\Model\BarcodeImageFormat $image_format image_format
+     * @param \Aspose\BarCode\Model\BarcodeImageFormat $image_format Barcode output image format. Default value: png.
      *
      * @return $this
      */
@@ -275,7 +275,7 @@ class BarcodeImageParams implements ArrayAccess
     /**
      * Sets text_location
      *
-     * @param \Aspose\BarCode\Model\CodeLocation $text_location text_location
+     * @param \Aspose\BarCode\Model\CodeLocation $text_location Specify the displayed text location. Set to CodeLocation.None to hide CodeText. Default value depends on BarcodeType: CodeLocation.Below for 1D barcodes and CodeLocation.None for 2D barcodes.
      *
      * @return $this
      */
@@ -299,7 +299,7 @@ class BarcodeImageParams implements ArrayAccess
     /**
      * Sets foreground_color
      *
-     * @param string $foreground_color Specify the displaying bars and content Color. Value: Color name from https://reference.aspose.com/drawing/net/system.drawing/color/ or ARGB value started with #. For example: AliceBlue or #FF000000 Default value: Black.
+     * @param string $foreground_color Specify the display color for bars and content. Value: Color name from https://reference.aspose.com/drawing/net/system.drawing/color/ or ARGB value starting with #. For example: AliceBlue or #FF000000. Default value: Black.
      *
      * @return $this
      */
@@ -323,7 +323,7 @@ class BarcodeImageParams implements ArrayAccess
     /**
      * Sets background_color
      *
-     * @param string $background_color Background color of the barcode image. Value: Color name from https://reference.aspose.com/drawing/net/system.drawing/color/ or ARGB value started with #. For example: AliceBlue or #FF000000 Default value: White.
+     * @param string $background_color Background color of the barcode image. Value: Color name from https://reference.aspose.com/drawing/net/system.drawing/color/ or ARGB value starting with #. For example: AliceBlue or #FF000000. Default value: White.
      *
      * @return $this
      */
@@ -347,7 +347,7 @@ class BarcodeImageParams implements ArrayAccess
     /**
      * Sets units
      *
-     * @param \Aspose\BarCode\Model\GraphicsUnit $units units
+     * @param \Aspose\BarCode\Model\GraphicsUnit $units Common units for all measurements. Default units: pixels.
      *
      * @return $this
      */
@@ -371,7 +371,7 @@ class BarcodeImageParams implements ArrayAccess
     /**
      * Sets resolution
      *
-     * @param float $resolution Resolution of the BarCode image. One value for both dimensions. Default value: 96 dpi. Decimal separator is dot.
+     * @param float $resolution Resolution of the barcode image. One value for both dimensions. Default value: 96 dpi. Decimal separator is a dot.
      *
      * @return $this
      */
@@ -403,7 +403,7 @@ class BarcodeImageParams implements ArrayAccess
     /**
      * Sets image_height
      *
-     * @param float $image_height Height of the barcode image in given units. Default units: pixel. Decimal separator is dot.
+     * @param float $image_height Height of the barcode image in the specified units. Default units: pixels. Decimal separator is a dot.
      *
      * @return $this
      */
@@ -427,7 +427,7 @@ class BarcodeImageParams implements ArrayAccess
     /**
      * Sets image_width
      *
-     * @param float $image_width Width of the barcode image in given units. Default units: pixel. Decimal separator is dot.
+     * @param float $image_width Width of the barcode image in the specified units. Default units: pixels. Decimal separator is a dot.
      *
      * @return $this
      */
@@ -451,7 +451,7 @@ class BarcodeImageParams implements ArrayAccess
     /**
      * Sets rotation_angle
      *
-     * @param int $rotation_angle BarCode image rotation angle, measured in degree, e.g. RotationAngle = 0 or RotationAngle = 360 means no rotation. If RotationAngle NOT equal to 90, 180, 270 or 0, it may increase the difficulty for the scanner to read the image. Default value: 0.
+     * @param int $rotation_angle Barcode image rotation angle, measured in degrees. For example, RotationAngle = 0 or RotationAngle = 360 means no rotation. If RotationAngle is not equal to 90, 180, 270, or 0, it may increase the difficulty for the scanner to read the image. Default value: 0.
      *
      * @return $this
      */
@@ -465,7 +465,7 @@ class BarcodeImageParams implements ArrayAccess
     /**
      * Returns true if offset exists. False otherwise.
      *
-     * @param integer $offset Offset
+     * @param string $offset Offset
      *
      * @return boolean
      */
@@ -477,7 +477,7 @@ class BarcodeImageParams implements ArrayAccess
     /**
      * Gets offset.
      *
-     * @param integer $offset Offset
+     * @param string $offset Offset
      *
      * @return mixed
      */
@@ -490,8 +490,8 @@ class BarcodeImageParams implements ArrayAccess
     /**
      * Sets value based on offset.
      *
-     * @param integer $offset Offset
-     * @param mixed   $value  Value to be set
+     * @param string $offset Offset
+     * @param mixed  $value  Value to be set
      *
      * @return void
      */
@@ -507,7 +507,7 @@ class BarcodeImageParams implements ArrayAccess
     /**
      * Unsets offset.
      *
-     * @param integer $offset Offset
+     * @param string $offset Offset
      *
      * @return void
      */

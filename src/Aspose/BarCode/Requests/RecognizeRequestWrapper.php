@@ -20,10 +20,10 @@ class RecognizeRequestWrapper
     /**
      * Initializes a new instance of the RecognizeRequestWrapper class.
      *
-     * @param \Aspose\BarCode\Model\DecodeBarcodeType $barcode_type Type of barcode to recognize
-     * @param string $file_url Url to barcode image
-     * @param \Aspose\BarCode\Model\RecognitionMode $recognition_mode Recognition mode
-     * @param \Aspose\BarCode\Model\RecognitionImageKind $recognition_image_kind Image kind for recognition
+     * @param \Aspose\BarCode\Model\DecodeBarcodeType $barcode_type Type of barcode to recognize.
+     * @param string $file_url URL to the barcode image.
+     * @param \Aspose\BarCode\Model\RecognitionMode $recognition_mode Recognition mode.
+     * @param \Aspose\BarCode\Model\RecognitionImageKind $recognition_image_kind Image kind for recognition.
      */
     public function __construct($barcode_type, $file_url, $recognition_mode = null, $recognition_image_kind = null)
     {
@@ -34,22 +34,22 @@ class RecognizeRequestWrapper
     }
 
     /**
-     * Type of barcode to recognize
+     * Type of barcode to recognize.
      */
     public $barcode_type;
 
     /**
-     * Url to barcode image
+     * URL to the barcode image.
      */
     public $file_url;
 
     /**
-     * Recognition mode
+     * Recognition mode.
      */
     public $recognition_mode;
 
     /**
-     * Image kind for recognition
+     * Image kind for recognition.
      */
     public $recognition_image_kind;
 }

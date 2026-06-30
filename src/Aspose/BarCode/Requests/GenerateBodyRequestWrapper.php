@@ -20,7 +20,7 @@ class GenerateBodyRequestWrapper
     /**
      * Initializes a new instance of the GenerateBodyRequestWrapper class.
      *
-     * @param \Aspose\BarCode\Model\GenerateParams $generate_params Parameters of generation
+     * @param \Aspose\BarCode\Model\GenerateParams $generate_params Generation parameters.
      */
     public function __construct($generate_params)
     {
@@ -28,7 +28,7 @@ class GenerateBodyRequestWrapper
     }
 
     /**
-     * Parameters of generation
+     * Generation parameters.
      */
     public $generate_params;
 }
