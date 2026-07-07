@@ -37,6 +37,40 @@ jobs:
     - name: Run linter
       run: composer run-script lint
 
+  coverage:
+    needs: build
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout
+      uses: actions/checkout@v6
+
+    - name: Install PHP with pcov
+      uses: shivammathur/setup-php@v2
+      with:
+        php-version: '8.3'
+        coverage: pcov
+
+    - name: Cache Composer packages
+      id: composer-cache
+      uses: actions/cache@v5
+      with:
+        path: vendor
+        key: ${{ runner.os }}-php-${{ hashFiles('**/composer.lock') }}
+        restore-keys: |
+          ${{ runner.os }}-php-
+
+    - name: Install dependencies
+      run: composer install --prefer-dist --no-progress --no-suggest
+
+    - name: Run tests with coverage
+      env:
+        TEST_CONFIGURATION_ACCESS_TOKEN: ${{ secrets.TEST_CONFIGURATION_ACCESS_TOKEN }}
+      run: vendor/bin/phpunit --coverage-clover clover.xml
+
+    - name: Enforce 80% line coverage gate
+      run: php scripts/coverage-check.php clover.xml 80
+
   test:
     needs: build
     runs-on: ${{ matrix.operating-system }}

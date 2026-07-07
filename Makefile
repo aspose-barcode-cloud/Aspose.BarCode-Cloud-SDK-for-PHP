@@ -14,6 +14,11 @@ test:
 	composer test
 	./scripts/run_snippets.sh
 
+.PHONY: cover
+cover:
+	XDEBUG_MODE=coverage vendor/bin/phpunit --coverage-clover clover.xml
+	php scripts/coverage-check.php clover.xml 80
+
 .PHONY: init
 init:
 	composer install

@@ -6,6 +6,8 @@
 /nbproject/private
 /snippets_test
 /vendor
+/clover.xml
 Configuration*.json
 !Configuration.example.json
 phpunit.log
+/phpunit-log.xml
