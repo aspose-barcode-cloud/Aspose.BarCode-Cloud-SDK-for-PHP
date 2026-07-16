@@ -37,4 +37,4 @@ Use this reference when you want the closest existing PHP pattern before writing
 - `tests/ScanApiTest.php`: scan via base64 body, multipart, and public URL.
 - `tests/ConfigurationTest.php`: configuration defaults, JSON serialization, and environment-variable loading.
 - `tests/ExceptionTest.php`: expected API failures and parsed error behavior.
-- `tests/ObjectSerializerTests.php`: serializer behavior if model or date formatting changes.
+- `tests/ObjectSerializerTest.php`: serializer behavior if model or date formatting changes.
