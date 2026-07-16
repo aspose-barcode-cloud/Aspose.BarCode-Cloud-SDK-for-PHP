@@ -55,8 +55,9 @@ final class RequestBuilderCoverageTest extends OfflineCoverageTestCase
 
     private function invokeBuilder(object $api, string $method, object $request): HttpRequest
     {
+        // No setAccessible(true): it is a no-op since PHP 8.1 (reflection can invoke
+        // non-public methods directly) and calling it is deprecated as of PHP 8.5.
         $reflection = new ReflectionMethod($api, $method);
-        $reflection->setAccessible(true);
         $built = $reflection->invoke($api, $request);
         assert($built instanceof HttpRequest);
 
