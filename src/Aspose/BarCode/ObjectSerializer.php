@@ -6,7 +6,6 @@ namespace Aspose\BarCode;
 
 use DateTime;
 use DateTimeInterface;
-use Exception;
 use SplFileObject;
 
 class ObjectSerializer
@@ -206,7 +205,11 @@ class ObjectSerializer
             if (!empty($data)) {
                 try {
                     return new DateTime($data);
-                } catch (Exception $e) {
+                } catch (\Throwable $e) {
+                    // Invalid date string: treat it as a missing value and return null.
+                    // Catch \Throwable (not just \Exception): on PHP 8.3+ with Xdebug loaded,
+                    // decorating the thrown DateMalformedStringException with $xdebug_message
+                    // raises an \Error, which is not an \Exception and would otherwise escape.
                 }
             }
 
