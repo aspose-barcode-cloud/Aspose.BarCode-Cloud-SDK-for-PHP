@@ -25,12 +25,12 @@ function main()
 {
     $scanApi = new ScanApi(null, makeConfiguration());
 
-    $request = new ScanRequestWrapper("https://products.aspose.app/barcode/scan/img/how-to/scan/step2.png");
+    $request = new ScanRequestWrapper("https://raw.githubusercontent.com/aspose-barcode-cloud/Aspose.BarCode-Cloud-SDK-for-PHP/main/testdata/QR_and_Code128.png");
     $result = $scanApi->scan($request);
 
     echo sprintf(
         "File '%s' recognized, result: '%s'\n",
-        "https://products.aspose.app/barcode/scan/img/how-to/scan/step2.png",
+        "https://raw.githubusercontent.com/aspose-barcode-cloud/Aspose.BarCode-Cloud-SDK-for-PHP/main/testdata/QR_and_Code128.png",
         $result->getBarcodes()[0]->getBarcodeValue()
     );
 }

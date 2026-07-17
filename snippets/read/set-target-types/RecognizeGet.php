@@ -28,7 +28,7 @@ function main()
 
     $request = new RecognizeRequestWrapper(
         DecodeBarcodeType::MostCommonlyUsed,
-        "https://products.aspose.app/barcode/scan/img/how-to/scan/step2.png"
+        "https://raw.githubusercontent.com/aspose-barcode-cloud/Aspose.BarCode-Cloud-SDK-for-PHP/main/testdata/QR_and_Code128.png"
     );
 
     $result = $recognizeApi->recognize($request);

@@ -50,7 +50,7 @@ final class RecognizeApiTest extends TestCase
         $response = self::$api->recognize(
             new RecognizeRequestWrapper(
                 DecodeBarcodeType::QR,
-                "https://products.aspose.app/barcode/scan/img/how-to/scan/step2.png",
+                "https://raw.githubusercontent.com/aspose-barcode-cloud/Aspose.BarCode-Cloud-SDK-for-PHP/main/testdata/QR_and_Code128.png",
                 RecognitionMode::Fast,
                 RecognitionImageKind::ClearImage
             )
@@ -59,7 +59,7 @@ final class RecognizeApiTest extends TestCase
         $this->assertCount(1, $response->getBarcodes());
         $barcode = $response->getBarcodes()[0];
         $this->assertEquals(DecodeBarcodeType::QR, $barcode->getType());
-        $this->assertEquals("http://en.m.wikipedia.org", $barcode->getBarcodeValue());
+        $this->assertEquals("Hello world!", $barcode->getBarcodeValue());
     }
 
     public function testBarcodeRecognizeBodyPost()

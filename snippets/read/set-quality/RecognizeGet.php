@@ -26,7 +26,7 @@ function main()
 {
     $recognizeApi = new RecognizeApi(null, makeConfiguration());
 
-    $request = new RecognizeRequestWrapper(DecodeBarcodeType::QR, "https://products.aspose.app/barcode/scan/img/how-to/scan/step2.png");
+    $request = new RecognizeRequestWrapper(DecodeBarcodeType::QR, "https://raw.githubusercontent.com/aspose-barcode-cloud/Aspose.BarCode-Cloud-SDK-for-PHP/main/testdata/QR_and_Code128.png");
     $request->recognition_mode = RecognitionMode::Fast;
     $request->recognition_image_kind = RecognitionImageKind::Photo;
 
@@ -34,7 +34,7 @@ function main()
 
     echo sprintf(
         "File '%s' recognized, result: '%s'\n",
-        "https://products.aspose.app/barcode/scan/img/how-to/scan/step2.png",
+        "https://raw.githubusercontent.com/aspose-barcode-cloud/Aspose.BarCode-Cloud-SDK-for-PHP/main/testdata/QR_and_Code128.png",
         $result->getBarcodes()[0]->getBarcodeValue()
     );
 }

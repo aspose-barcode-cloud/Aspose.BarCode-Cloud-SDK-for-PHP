@@ -73,11 +73,13 @@ final class ScanApiTest extends TestCase
     public function testBarcodeScanGet()
     {
 
-        $response = self::$api->scan(new ScanRequestWrapper("https://products.aspose.app/barcode/scan/img/how-to/scan/step2.png"));
+        $response = self::$api->scan(new ScanRequestWrapper("https://raw.githubusercontent.com/aspose-barcode-cloud/Aspose.BarCode-Cloud-SDK-for-PHP/main/testdata/QR_and_Code128.png"));
 
-        $this->assertCount(1, $response->getBarcodes());
+        $this->assertCount(2, $response->getBarcodes());
 
         $this->assertEquals(DecodeBarcodeType::QR, $response->getBarcodes()[0]->getType());
-        $this->assertEquals("http://en.m.wikipedia.org", $response->getBarcodes()[0]->getBarcodeValue());
+        $this->assertEquals("Hello world!", $response->getBarcodes()[0]->getBarcodeValue());
+        $this->assertEquals(DecodeBarcodeType::Code128, $response->getBarcodes()[1]->getType());
+        $this->assertEquals("Hello world!", $response->getBarcodes()[1]->getBarcodeValue());
     }
 }
