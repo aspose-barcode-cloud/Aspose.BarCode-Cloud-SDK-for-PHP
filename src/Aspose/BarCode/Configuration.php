@@ -53,8 +53,8 @@ class Configuration implements JsonSerializable
     protected $authUrl = 'https://id.aspose.cloud/connect/token';
 
     /**
-     * Version of API to use, possible values are v1, v1.1, v2, v3
-     * default value is v1
+     * Versioned base path of the API (e.g. /v4.0)
+     *
      * @var string
      */
     protected $base_path = '/v4.0';
