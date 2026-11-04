@@ -11,7 +11,7 @@ rm -rf "${RUN_DIR}" || true
 mkdir -p "${RUN_DIR}"
 
 pushd ${RUN_DIR}
-ln -sn -F ../src ./src
+ln -sn ../src ./src
 popd
 
 for file in $(find "${SNIPPETS_DIR}" -name "*.php"); do
