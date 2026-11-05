@@ -6,6 +6,9 @@ on:
   pull_request:
     branches: [ main ]
 
+permissions:
+  contents: read
+
 jobs:
   build:
     runs-on: ubuntu-latest
@@ -63,13 +66,19 @@ jobs:
     - name: Install dependencies
       run: composer install --prefer-dist --no-progress --no-suggest
 
-    - name: Run tests with coverage
+    - name: Run tests with 80% line coverage gate
       env:
         TEST_CONFIGURATION_ACCESS_TOKEN: ${{ secrets.TEST_CONFIGURATION_ACCESS_TOKEN }}
-      run: vendor/bin/phpunit --coverage-clover clover.xml
+      run: make cover
 
-    - name: Enforce 80% line coverage gate
-      run: php scripts/coverage-check.php clover.xml 80
+    - name: Upload coverage report
+      uses: actions/upload-artifact@v7
+      with:
+        name: coverage
+        path: |
+          coverage/coverage-badge.json
+          coverage/coverage-summary.json
+          coverage/clover.xml
 
   test:
     needs: build
@@ -99,3 +108,34 @@ jobs:
         composer run-script test
         chmod +x scripts/*
         ./scripts/run_snippets.sh
+
+  publish-coverage:
+    name: Publish coverage
+    needs: coverage
+    # Only pushes to the default branch publish, and only once the GitHub App for
+    # the test-coverage repository is configured (COVERAGE_APP_ID variable).
+    if: github.event_name == 'push' && github.ref == format('refs/heads/{0}', github.event.repository.default_branch) && vars.COVERAGE_APP_ID != ''
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v6
+      with:
+        persist-credentials: false
+    - uses: actions/download-artifact@v8
+      with:
+        name: coverage
+        path: coverage
+    - name: Get a token for the test-coverage repository
+      id: coverage-token
+      uses: actions/create-github-app-token@v3
+      with:
+        app-id: ${{ vars.COVERAGE_APP_ID }}
+        private-key: ${{ secrets.COVERAGE_APP_PRIVATE_KEY }}
+        owner: aspose-barcode-cloud
+        repositories: test-coverage
+        permission-contents: write
+    - name: Publish to test-coverage
+      run: ./scripts/publish-coverage.bash php
+      env:
+        COVERAGE_TOKEN: ${{ steps.coverage-token.outputs.token }}
+        COVERAGE_APP_SLUG: ${{ steps.coverage-token.outputs.app-slug }}
