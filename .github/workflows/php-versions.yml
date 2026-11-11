@@ -104,8 +104,15 @@ jobs:
     - name: Run test suite
       env:
         TEST_CONFIGURATION_ACCESS_TOKEN: ${{ secrets.TEST_CONFIGURATION_ACCESS_TOKEN }}
+      run: composer run-script test
+
+    # The default Windows shell is PowerShell, which does not run .sh scripts:
+    # without bash the step passed on Windows without running any snippet.
+    - name: Run snippets
+      shell: bash
+      env:
+        TEST_CONFIGURATION_ACCESS_TOKEN: ${{ secrets.TEST_CONFIGURATION_ACCESS_TOKEN }}
       run: |
-        composer run-script test
         chmod +x scripts/*
         ./scripts/run_snippets.sh
 
