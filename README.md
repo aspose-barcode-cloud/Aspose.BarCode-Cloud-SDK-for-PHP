@@ -4,7 +4,6 @@
 [![License](https://img.shields.io/github/license/aspose-barcode-cloud/Aspose.BarCode-Cloud-SDK-for-PHP)](LICENSE)
 [![Test](https://github.com/aspose-barcode-cloud/Aspose.BarCode-Cloud-SDK-for-PHP/actions/workflows/php-versions.yml/badge.svg?branch=main)](https://github.com/aspose-barcode-cloud/Aspose.BarCode-Cloud-SDK-for-PHP/actions/workflows/php-versions.yml)
 [![Coverage](https://img.shields.io/endpoint?url=https://raw.githubusercontent.com/aspose-barcode-cloud/test-coverage/main/php/coverage-badge.json)](https://github.com/aspose-barcode-cloud/test-coverage)
-[![zizmor](https://github.com/aspose-barcode-cloud/Aspose.BarCode-Cloud-SDK-for-PHP/actions/workflows/zizmor.yml/badge.svg?branch=main)](https://github.com/aspose-barcode-cloud/Aspose.BarCode-Cloud-SDK-for-PHP/actions/workflows/zizmor.yml)
 [![Supported PHP Versions](https://img.shields.io/packagist/dependency-v/aspose/barcode-cloud-php/php)](https://packagist.org/packages/aspose/barcode-cloud-php)
 [![Packagist Version](https://img.shields.io/packagist/v/aspose/barcode-cloud-php)](https://packagist.org/packages/aspose/barcode-cloud-php)
 
