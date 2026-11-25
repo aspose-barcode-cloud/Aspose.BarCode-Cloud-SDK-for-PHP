@@ -14,6 +14,22 @@ require_once 'TestConfiguration.php';
 
 class BatchGenerateTest extends TestCase
 {
+    public function testBatchModelRetainsNamespacedGenerationType(): void
+    {
+        self::assertSame('\\' . GenerateParams::class, BatchGenerateItem::swaggerTypes()['generation']);
+        $item = \Aspose\BarCode\ObjectSerializer::deserialize(
+            (object) ['generation' => (object) [
+                'encodeData' => (object) ['data' => 'Batch example'],
+            ]],
+            BatchGenerateItem::class
+        );
+        if (!$item instanceof BatchGenerateItem) {
+            self::fail('Batch deserialization must return a BatchGenerateItem');
+        }
+        self::assertInstanceOf(GenerateParams::class, $item->getGeneration());
+        self::assertSame('Batch example', $item->getGeneration()->getEncodeData()->getData());
+    }
+
     public function testGenerateBatchArchives(): void
     {
         $api = new GenerateApi(null, TestConfiguration::fromFileOrEnv());

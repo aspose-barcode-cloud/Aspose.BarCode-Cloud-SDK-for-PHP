@@ -30,7 +30,7 @@ class BatchGenerateItem implements ArrayAccess
      */
     protected static array $swaggerTypes = [
         'file_name' => 'string',
-        'generation' => '\AsposeBarCodeModelGenerateParams'
+        'generation' => '\Aspose\BarCode\Model\GenerateParams'
     ];
 
     /**
@@ -236,7 +236,7 @@ class BatchGenerateItem implements ArrayAccess
     /**
      * Gets generation
      *
-     * @return \AsposeBarCodeModelGenerateParams
+     * @return \Aspose\BarCode\Model\GenerateParams
      */
     public function getGeneration()
     {
@@ -246,7 +246,7 @@ class BatchGenerateItem implements ArrayAccess
     /**
      * Sets generation
      *
-     * @param \AsposeBarCodeModelGenerateParams $generation Barcode generation parameters.
+     * @param \Aspose\BarCode\Model\GenerateParams $generation Barcode generation parameters.
      *
      * @return $this
      */
