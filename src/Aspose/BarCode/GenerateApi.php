@@ -664,6 +664,254 @@ class GenerateApi
     }
 
     /**
+     * Operation generateBatch
+     *
+     * Generate multiple barcodes and return them in a ZIP, TAR, or TAR.GZ archive.
+     *
+     * @param Requests\GenerateBatchRequestWrapper $request is a request object for operation
+     *
+     * @throws ApiException on non-2xx response
+     * @throws InvalidArgumentException
+     * @return \SplFileObject
+     */
+    public function generateBatch(Requests\GenerateBatchRequestWrapper $request)
+    {
+        try {
+            list($response) = $this->generateBatchWithHttpInfo($request);
+            return $response;
+        } catch (RepeatRequestException $e) {
+            list($response) = $this->generateBatchWithHttpInfo($request);
+            return $response;
+        }
+    }
+
+    /**
+     * Operation generateBatchWithHttpInfo
+     *
+     * Generate multiple barcodes and return them in a ZIP, TAR, or TAR.GZ archive.
+     *
+     * @param Requests\GenerateBatchRequestWrapper $request is a request object for operation
+     *
+     * @throws ApiException on non-2xx response
+     * @throws InvalidArgumentException
+     * @return array of \SplFileObject, HTTP status code, HTTP response headers (array of strings)
+     */
+    public function generateBatchWithHttpInfo(Requests\GenerateBatchRequestWrapper $request)
+    {
+        $returnType = '\SplFileObject';
+        $request = $this->GenerateBatchRequestWrapper($request);
+
+        try {
+            $options = $this->_createHttpClientOption();
+            try {
+                $response = $this->client->send($request, $options);
+            } catch (RequestException $e) {
+                throw new ApiException("[{$e->getCode()}] {$e->getMessage()}", $e->getCode(), $e->getResponse() ? $e->getResponse()->getHeaders() : null, $e->getResponse() ? $e->getResponse()->getBody()->getContents() : null);
+            }
+
+            $statusCode = $response->getStatusCode();
+
+            if ($statusCode < 200 || $statusCode > 299) {
+                if ($statusCode === 401) {
+                    $this->_requestToken();
+                    throw new RepeatRequestException('Request must be retried', $statusCode, $response->getHeaders(), $response->getBody());
+                }
+
+                throw new ApiException(sprintf('[%d] Error connecting to the API (%s)', $statusCode, $request->getUri()), $statusCode, $response->getHeaders(), $response->getBody());
+            }
+
+            $responseBody = $response->getBody();
+            if ($returnType === '\SplFileObject') {
+                $content = $responseBody; //stream goes to serializer
+            } else {
+                $content = $responseBody->getContents();
+                if ($returnType !== 'string') {
+                    $content = json_decode($content);
+                }
+            }
+
+            if ($this->config->getDebug()) {
+                $this->_writeResponseLog($statusCode, $response->getHeaders(), ObjectSerializer::deserialize($content, $returnType, []));
+            }
+
+            return [
+                ObjectSerializer::deserialize($content, $returnType, []),
+                $response->getStatusCode(),
+                $response->getHeaders()
+            ];
+        } catch (ApiException $e) {
+            $code = $e->getCode();
+            if ($code >= 400 && $code < 500) {
+                $data = ObjectSerializer::deserialize($e->getResponseBody(), '\Aspose\BarCode\Model\ApiErrorResponse', $e->getResponseHeaders());
+                $e->setResponseObject($data);
+            }
+            throw $e;
+        }
+    }
+
+    /**
+     * Operation generateBatchAsync
+     *
+     * Generate multiple barcodes and return them in a ZIP, TAR, or TAR.GZ archive.
+     *
+     * @param Requests\GenerateBatchRequestWrapper $request is a request object for operation
+     *
+     * @throws InvalidArgumentException
+     * @return \GuzzleHttp\Promise\PromiseInterface
+     */
+    public function generateBatchAsync(Requests\GenerateBatchRequestWrapper $request)
+    {
+        return $this->generateBatchAsyncWithHttpInfo($request)
+            ->then(
+                function ($response) {
+                    return $response[0];
+                }
+            );
+    }
+
+    /**
+     * Operation generateBatchAsyncWithHttpInfo
+     *
+     * Generate multiple barcodes and return them in a ZIP, TAR, or TAR.GZ archive.
+     *
+     * @param Requests\GenerateBatchRequestWrapper $request is a request object for operation
+     *
+     * @throws InvalidArgumentException
+     * @return \GuzzleHttp\Promise\PromiseInterface
+     */
+    public function generateBatchAsyncWithHttpInfo(Requests\GenerateBatchRequestWrapper $request)
+    {
+        $returnType = '\SplFileObject';
+        $request = $this->GenerateBatchRequestWrapper($request);
+
+        return $this->client
+            ->sendAsync($request, $this->_createHttpClientOption())
+            ->then(
+                function ($response) use ($returnType) {
+                    $responseBody = $response->getBody();
+                    if ($returnType === '\SplFileObject') {
+                        $content = $responseBody; //stream goes to serializer
+                    } else {
+                        $content = $responseBody->getContents();
+                        if ($returnType !== 'string') {
+                            $content = json_decode($content);
+                        }
+                    }
+
+                    if ($this->config->getDebug()) {
+                        $this->_writeResponseLog($response->getStatusCode(), $response->getHeaders(), ObjectSerializer::deserialize($content, $returnType, []));
+                    }
+
+                    return [
+                        ObjectSerializer::deserialize($content, $returnType, []),
+                        $response->getStatusCode(),
+                        $response->getHeaders()
+                    ];
+                },
+                function ($exception) {
+                    $response = $exception->getResponse();
+                    $statusCode = $response->getStatusCode();
+
+                    if ($exception instanceof RepeatRequestException) {
+                        //$this->_refreshToken();
+                        throw new RepeatRequestException('Request must be retried', $statusCode, $response->getHeaders(), $response->getBody());
+                    }
+
+                    throw new ApiException(
+                        sprintf('[%d] Error connecting to the API (%s)', $statusCode, $exception->getRequest()->getUri()),
+                        $statusCode,
+                        $response->getHeaders(),
+                        $response->getBody()
+                    );
+                }
+            );
+    }
+
+    /**
+     * Create request for operation 'generateBatch'
+     *
+     * @param Requests\GenerateBatchRequestWrapper $request is a request object for operation
+     *
+     * @throws InvalidArgumentException
+     * @return \GuzzleHttp\Psr7\Request
+     */
+    protected function GenerateBatchRequestWrapper(Requests\GenerateBatchRequestWrapper $request)
+    {
+        // verify the required parameter 'batch_generate_request' is set
+        if (!isset($request->batch_generate_request)) {
+            throw new InvalidArgumentException('Missing the required parameter $batch_generate_request when calling generateBatch');
+        }
+
+        $resourcePath = '/barcode/generate-batch';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $httpBody = '';
+        $multipart = false;
+
+        $resourcePath = $this->_parseURL($resourcePath, $queryParams);
+
+        // body params
+        $_tempBody = null;
+        if (isset($request->batch_generate_request)) {
+            if (is_string($request->batch_generate_request)) {
+                $_tempBody = "\"" . $request->batch_generate_request . "\"";
+            } else {
+                $_tempBody = $request->batch_generate_request;
+            }
+        }
+
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/zip', 'application/x-tar', 'application/gzip', 'application/json', 'application/xml']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/zip', 'application/x-tar', 'application/gzip', 'application/json', 'application/xml'],
+                ['application/json', 'application/xml']
+            );
+        }
+
+        // for model (json/xml)
+        // $_tempBody is the method argument, if present
+        $httpBody = $_tempBody;
+        // \stdClass has no __toString(), so we should encode it manually
+        if ($httpBody instanceof \stdClass && $headers['Content-Type'] === 'application/json') {
+            $httpBody = \GuzzleHttp\json_encode($httpBody);
+        }
+
+        if (!$this->config->getAccessToken()) {
+            $this->_requestToken();
+        }
+        $headers['Authorization'] = 'Bearer ' . $this->config->getAccessToken();
+
+        $defaultHeaders = [];
+        if ($this->config->getUserAgent()) {
+            $defaultHeaders['x-aspose-client'] = $this->config->getUserAgent();
+        }
+
+        $defaultHeaders['x-aspose-client-version'] = $this->config->getClientVersion();
+
+        $headers = array_merge(
+            $defaultHeaders,
+            $headerParams,
+            $headers
+        );
+
+        $req = new Request(
+            'POST',
+            $this->config->getHost() . $resourcePath,
+            $headers,
+            $httpBody
+        );
+        if ($this->config->getDebug()) {
+            $this->_writeRequestLog('POST', $this->config->getHost() . $resourcePath, $headers, $httpBody);
+        }
+
+        return $req;
+    }
+
+    /**
      * Operation generateBody
      *
      * Generate a barcode using a POST request with parameters in the request body in JSON or XML format.
