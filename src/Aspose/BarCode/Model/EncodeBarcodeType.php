@@ -434,4 +434,10 @@ class EncodeBarcodeType
     /// </summary>
     public const VIN =  "VIN";
 
+    /// <summary>
+    /// Enum value JapanPost
+    /// </summary>
+    public const JapanPost =  "JapanPost";
+    public const JAPAN_POST = "JapanPost";
+
 }

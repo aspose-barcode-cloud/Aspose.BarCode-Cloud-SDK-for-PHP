@@ -7,6 +7,7 @@ All URIs are relative to https://api.aspose.cloud/v4.0, except if the operation 
 | Method | HTTP request | Description |
 | ------------- | ------------- | ------------- |
 | [**generate()**](GenerateApi.md#generate) | **GET** /barcode/generate/{barcodeType} | Generate a barcode using a GET request with parameters in the route and query string. |
+| [**generateBatch()**](GenerateApi.md#generateBatch) | **POST** /barcode/generate-batch | Generate multiple barcodes and return them in a ZIP, TAR, or TAR.GZ archive. |
 | [**generateBody()**](GenerateApi.md#generateBody) | **POST** /barcode/generate-body | Generate a barcode using a POST request with parameters in the request body in JSON or XML format. |
 | [**generateMultipart()**](GenerateApi.md#generateMultipart) | **POST** /barcode/generate-multipart | Generate a barcode using a POST request with parameters in a multipart form. |
 
@@ -124,6 +125,64 @@ try {
 
 - **Content-Type**: Not defined
 - **Accept**: `image/png`, `image/bmp`, `image/gif`, `image/jpeg`, `image/svg+xml`, `image/tiff`, `application/json`, `application/xml`
+
+[[Back to top]](#) [[Back to API list]](../../README.md#endpoints)
+[[Back to Model list]](../../README.md#models)
+[[Back to README]](../../README.md)
+
+## `generateBatch()`
+
+```php
+generateBatch($batch_generate_request): \SplFileObject
+```
+
+Generate multiple barcodes and return them in a ZIP, TAR, or TAR.GZ archive.
+
+### Example
+
+```php
+<?php
+require_once(__DIR__ . '/vendor/autoload.php');
+
+
+// Configure OAuth2 access token for authorization: JWT
+$config = Aspose\BarCode\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+
+
+$apiInstance = new Aspose\BarCode\Api\GenerateApi(
+    // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
+    // This is optional, `GuzzleHttp\Client` will be used as default.
+    new GuzzleHttp\Client(),
+    $config
+);
+$batch_generate_request = new \Aspose\BarCode\Model\BatchGenerateRequest(); // \Aspose\BarCode\Model\BatchGenerateRequest | Batch generation request in JSON or XML format.
+
+try {
+    $result = $apiInstance->generateBatch($batch_generate_request);
+    print_r($result);
+} catch (Exception $e) {
+    echo 'Exception when calling GenerateApi->generateBatch: ', $e->getMessage(), PHP_EOL;
+}
+```
+
+### Parameters
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **batch_generate_request** | [**\Aspose\BarCode\Model\BatchGenerateRequest**](../Model/BatchGenerateRequest.md)| Batch generation request in JSON or XML format. | |
+
+### Return type
+
+**\SplFileObject**
+
+### Authorization
+
+[JWT](../../README.md#JWT)
+
+### HTTP request headers
+
+- **Content-Type**: `application/json`, `application/xml`
+- **Accept**: `application/zip`, `application/x-tar`, `application/gzip`, `application/json`, `application/xml`
 
 [[Back to top]](#) [[Back to API list]](../../README.md#endpoints)
 [[Back to Model list]](../../README.md#models)
